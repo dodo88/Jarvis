@@ -100,7 +100,8 @@
 								<input name="RememberMe" type="hidden" value="false">
 								<label for="Keep me logged in">Keep me logged in</label>
 							</div>
-							<input type="submit" value="Log in" class="login">
+							<input type="submit" value="login" class="login">
+							
 							<?php echo validation_errors(); ?>
 						</div>
 						<p class="already">You don’t have an account ?

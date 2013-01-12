@@ -26,10 +26,6 @@ class Home_user extends CI_Controller {
    
 	public function index()
 	{
-		if ( isset($_SESSION['username']) ) 
-		{
-			redirect('home_user');
-		}
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('username', 'UserName', 'valid_email|required');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
@@ -38,20 +34,38 @@ class Home_user extends CI_Controller {
 		{
 			// then validation passed. Get from db
 			$this->load->model('admin_model');
+			$useremail = $this->input->post('email_address');
+			$password = $this->input->post('password');
+			
+			if (isset($_POST['login'])) {
+				// If this page is loaded directly without passing le login page
+				// read from session
+				$useremail = $_SESSION['username'];
+				$password = $_SESSION['password'];
+			} else {
+				// If it is submitted from login, save to session
+				$_SESSION['username'] = $useremail;
+				$_SESSION['password'] = $password;
+			}
+			
 			$res = $this
 					->admin_model
 					->verify_user(
-						$this->input->post('email_address'), 
-						$this->input->post('password')
+						// $this->input->post('email_address'), 
+						// $this->input->post('password')
+						$useremail,
+						$password
 					);
 
 			if ( $res !== false )
 			{
-				$_SESSION['username'] = $this->input->post('email_address');
-				redirect('home_user');
+				$this->load->view('home_user');
+			} else {
+				$this->load->view('login');
 			}
-		}		
-		$this->load->view('login');
+		} else {
+			$this->load->view('login');
+		}
 	}
 	
 	public function logout()
