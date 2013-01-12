@@ -79,7 +79,7 @@
 			<div class="bg_bordure2" style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
 				<div class="bg_blanc" style="border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;">
 					<h4>LOGIN</h4>
-					<form action="#" method="get">
+					<form action="/jarvis/index.php/welcome/home_user" method="get">
 						<div class="green_bar" style="display: none; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;">
 							<p>We have sent you an email. Please check your email to reset your password.</p>
 						</div>
