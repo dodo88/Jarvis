@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class HomeUser extends CI_Controller {
+class Home_user extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,9 +17,47 @@ class HomeUser extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
+	public function __construct()
+	{
+      session_start();
+      parent::__construct();
+	}
+   
 	public function index()
 	{
-		$this->load->view('home_user');
+		if ( isset($_SESSION['username']) ) 
+		{
+			redirect('home_user');
+		}
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('username', 'UserName', 'valid_email|required');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
+		
+		if ( $this->form_validation->run() !== false ) 
+		{
+			// then validation passed. Get from db
+			$this->load->model('admin_model');
+			$res = $this
+					->admin_model
+					->verify_user(
+						$this->input->post('email_address'), 
+						$this->input->post('password')
+					);
+
+			if ( $res !== false )
+			{
+				$_SESSION['username'] = $this->input->post('email_address');
+				redirect('home_user');
+			}
+		}		
+		$this->load->view('login');
+	}
+	
+	public function logout()
+	{
+		session_destroy();
+		$this->load->view('welcome');
 	}
 }
 
