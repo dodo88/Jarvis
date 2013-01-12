@@ -66,13 +66,13 @@
 
 <div id="container">
 	<a class="membership_head" href="#">Sign up</a>
-	<a class="membership_head" href="/jarvis/index.php/welcome/home_user">Login</a>
+	<a class="membership_head" href="/jarvis/index.php/welcome/login">Login</a>
 	
 	<br/>
 	<br/>
 	
 	<div id="menu_top">
-		<a class="menu" href="#">Home</a>
+		<a class="menu" href="/jarvis">Home</a>
 		<a class="menu" href="#">Contact</a>
 		<a class="menu" href="#">About Us</a>
 	</div>

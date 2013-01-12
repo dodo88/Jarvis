@@ -73,7 +73,7 @@
 	<br/>
 	
 	<div id="menu_top">
-		<a class="menu" href="#">Home</a>
+		<a class="menu" href="/jarvis">Home</a>
 		<a class="menu" href="#">Approve Projects</a>
 		<a class="menu" href="#">Sell Projects</a>
 		<a class="menu" href="#">Manage Projects</a>
