@@ -65,16 +65,23 @@
 <body>
 
 <div id="container">
-	<a class="membership_head" href="#">Sign up</a>
-	<a class="membership_head" href="/jarvis/index.php/welcome/home_user">Login</a>
+	Hi, dodo! 
+	<a class="membership_head" href="/jarvis/index.php/welcome/index">Log Out</a>
+	<a class="membership_head" href="#">Edit Profile</a>
 	
 	<br/>
 	<br/>
 	
 	<div id="menu_top">
 		<a class="menu" href="#">Home</a>
-		<a class="menu" href="#">Contact</a>
-		<a class="menu" href="#">About Us</a>
+		<a class="menu" href="#">Approve Projects</a>
+		<a class="menu" href="#">Sell Projects</a>
+		<a class="menu" href="#">Manage Projects</a>
+		<a class="menu" href="#">Pro Profile</a>
+		<a class="menu" href="#">Project List</a>
+		<a class="menu" href="#">Pro List</a>
+		<a class="menu" href="#">Selling Tools</a>
+		<a class="menu" href="#">Reports</a>
 	</div>
 </div>
 
