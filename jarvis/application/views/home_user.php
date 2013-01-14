@@ -66,7 +66,7 @@
 
 <div id="container">
 	Hi, dodo! 
-	<a class="membership_head" href="/jarvis/index.php/welcome/index">Log Out</a>
+	<a class="membership_head" href="/jarvis/index.php/home_user/logout">Log Out</a>
 	<a class="membership_head" href="#">Edit Profile</a>
 	
 	<br/>

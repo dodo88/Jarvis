@@ -73,9 +73,6 @@ class Home_user extends CI_Controller {
 	
 	public function logout()
 	{
-		$this->session->unset_userdata('authenticated');
-		$this->session->unset_userdata('username');
-		$this->session->unset_userdata('password');
 		session_destroy();
 		$this->load->view('welcome');
 	}
