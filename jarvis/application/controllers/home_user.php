@@ -75,8 +75,8 @@ class Home_user extends CI_Controller {
 			if (isset($_COOKIE['username']) && $_COOKIE['username'] != ''
 				&& isset($_COOKIE['password']) && $_COOKIE['password'] != '')
 			{
-				$useremail = $this->input->post('email_address');
-				$password = $this->input->post('password');
+				$useremail = $_COOKIE['username'];
+				$password = $_COOKIE['password'];
 			}
 			
 			$res = $this
