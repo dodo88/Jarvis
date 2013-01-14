@@ -96,8 +96,7 @@
 								<span class="button_forgot" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">Forgot your password ?</span>
 							</p>
 							<div class="remember">
-								<input id="RememberMe" name="rememberme" type="checkbox" value="true">
-								<input name="RememberMe" type="hidden" value="false">
+								<input id="RememberMe" name="rememberme" type="checkbox" value="rememberme">
 								<label for="Keep me logged in">Keep me logged in</label>
 							</div>
 							<input type="submit" value="login" class="login">
