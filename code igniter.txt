@@ -1,0 +1,27 @@
+Quelque PHP MVC frameworks très connus : Code Igniter, Zend, Symfony, Cake PHP, Yii ...
+Entre ces framework, il y a 2 framework qui sont plus connus et très bien documenté Code Igniter et Zend.
+En plus ces 2 frameworks ont un grande communauté donc on peut chercher des solutions pour notre problème plus facilement.
+
+Donc entre Zend et Code Igniter, il y a des avantages et aussi des inconveniences.
+
+D'abord, Code Igniter est utilisé pour déployer les projets MVC petits et moyens.
+En utilisant Code Igniter, on peut économiser pas mal de temps pour les routines boulots comme
+création une structure des répertoires, etc ...
+La limite de Code Igniter est qu'on ne peut pas utiliser Code Igniter pour les système complexe qui
+nécessite un grand niveau de customization et personalisation.
+
+Par contre, Zend est appliqué bien pour les système complexe grace au nombreux de librairies. Mais on devrait 
+rebuilder tous à partir de zéro. Donc c'est très convenient pour les simple projet. C'est trop lourd pour mettre en place 
+Zend framework.
+
+Dans le cadre de ce projet, on va choisir Code Igniter come le framework PHP MVC.
+En résumé, il y a quelques points principaux concernant ce framework:
+	_ Système basé sur model-view-control
+	_PHP5 compatible
+	_grand communauté et large library of helper fonctions
+	_permettre de faire du cache
+	
+Les autres technologies qui sont utilisés aussi pour le projet est AJAX, Jquery 1.8
+
+
+
