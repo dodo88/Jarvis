@@ -27,49 +27,55 @@ class Home_user extends CI_Controller {
 	public function index()
 	{
 		$this->load->library('form_validation');
+		$this->load->library('session');
+		$this->load->helper('cookie');
 		$this->form_validation->set_rules('username', 'UserName', 'valid_email|required');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
-		
-		if ( $this->form_validation->run() !== false ) 
+		if( $this->session->userdata('authenticated'))
 		{
-			// then validation passed. Get from db
-			$this->load->model('admin_model');
-			$useremail = $this->input->post('email_address');
-			$password = $this->input->post('password');
+			$this->load->view('home_user');		
+		}
+		else
+		{
+			if ( $this->form_validation->run() !== false ) 
+			{
+				// then validation passed. Get from db
+				$this->load->model('admin_model');
+				$useremail = $this->input->post('email_address');
+				$password = $this->input->post('password');							
 			
-			if (isset($_POST['login'])) {
-				// If this page is loaded directly without passing le login page
-				// read from session
-				$useremail = $_SESSION['username'];
-				$password = $_SESSION['password'];
-			} else {
-				// If it is submitted from login, save to session
-				$_SESSION['username'] = $useremail;
-				$_SESSION['password'] = $password;
-			}
-			
-			$res = $this
+				$res = $this
 					->admin_model
 					->verify_user(
-						// $this->input->post('email_address'), 
-						// $this->input->post('password')
 						$useremail,
 						$password
 					);
 
-			if ( $res !== false )
-			{
-				$this->load->view('home_user');
+				if ( $res !== false )
+				{
+					$this->session->set_userdata('username', $useremail);
+					$this->session->set_userdata('password', $password);
+					$this->session->set_userdata('authenticated', true);
+					if ($this->input->post('rememberme'))
+					{
+						
+					}
+					$this->load->view('home_user');
+				} else {
+					$this->load->view('login');
+				}
+				
 			} else {
 				$this->load->view('login');
 			}
-		} else {
-			$this->load->view('login');
 		}
 	}
 	
 	public function logout()
 	{
+		$this->session->unset_userdata('authenticated');
+		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('password');
 		session_destroy();
 		$this->load->view('welcome');
 	}
