@@ -1,0 +1,54 @@
+form p {margin: 0 10px 0 10px; padding:2px 0 0 0; height: 38px; font-size:11px; width:480px;}
+
+form p .hidden {display:block; float:left; clear:left; width:162px; height:15px; margin:0; padding:0;}
+form p .field-validation-error {color:#d95f5c; font-size:11px; font-weight:normal; display:block; float:left; width:260px; height:15px; margin:0; padding:0;}
+
+form p label {color:#283a6c; font-size:12px; font-weight:bold; display:block; float:left; clear:left; width:150px; height:15px; text-align:right; margin:5px 0 0 0; padding:0;}
+form p .star {color:#d95f5c; font-size:12px; font-weight:bold; display:block; float:left; clear:none; width:10px; height:15px; text-align:left; margin:5px 0 0 0; padding:0;}
+
+form p input, form p select, form p textarea {color:#283a6c; font-size:12px; font-weight:normal; border:1px solid #a2bbd1; outline:0; float:left; 
+											width:260px; height:16px; margin: 0 0 0 1px; padding:2px 2px 2px 5px;}
+form p select {height:22px; width:190px; padding:2px;}
+form p textarea {height:171px;}
+form p .input-validation-error { border:1px solid #d95f5c}
+
+form p.backblue {background-color:#e3ecf3; padding:3px 3px 16px 3px; width:454px; margin:15px 0 0 32px}
+form p.backblue .hidden {width:55px}
+form p.backblue label {width:40px}
+form p.backblue .star {width:10px}
+form p.backblue select, p.backblue .field-validation-error {width:400px;}
+
+form p.large {height:96px;}
+form p.large textarea {width:310px; height:90px;}
+form p.large label {width:140px; padding-left:10px;}
+form p.large .star {width:10px; padding-left:0px;}
+
+form p.bigspace {height:196px; padding:0; margin:5px 0 0 7px; width:485px;}
+form p.bigspace label {display:inline; width:auto; padding:0 0 0 40px;}
+form p.bigspace .star {padding-left:0;}
+form p.bigspace textarea {width:458px; float:none; margin:5px 0 0 25px; padding:0;}
+form p.bigspace .field-validation-error {margin:5px 0 0 35px;}
+
+form p.validation {height:42px; padding:2px 0 0 20px;}
+form p.validation label {width:430px; padding:0px; text-align:left; clear:none; margin:1px 0 0 5px; height:auto;}
+form p.validation label a {text-decoration:none; color:#6699ff;}
+form p.validation label a:hover {text-decoration:underline;}
+form p.validation .star {width:10px; padding-left:0px; float:none; display:inline; margin:0;}
+form p.validation input {border:0; width:auto; margin:0; padding:0; clear:left;}
+form div.validation {padding:16px 0 0 0;}
+form div.validation .field-validation-error {color:#d95f5c; font-size:11px; font-weight:normal; display:block; 
+	margin:0 0 0 32px; padding:0;}
+
+form p.barre2 {color:#d95f5c; text-align:right; font-style:italic; font-size:11px; 
+	margin:18px 10px 0px 32px; height:12px; width:460px; padding:3px 0 0px 0;}
+
+form input.send {color:#ffffff; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/send.png); width:179px; height:33px; font-weight:bold; border:0; float:none;
+				display:inline-block; font-size:13px; text-decoration:none; padding: 6px 35px 7px 11px; margin:0 0 10px 32px; text-align:center;
+				background-color:transparent;}
+form input.send:hover {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/send_over.png); cursor:pointer;}
+
+form p input:focus, form p select:focus, form p textarea:focus {border:1px solid #89a956}
+
+form p a.details {float:left; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/form_details.png); display:block; width:57px; height:19px; margin:2px 0 0 5px;}
+
+table.list {font-size:13px;}

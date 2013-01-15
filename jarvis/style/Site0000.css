@@ -1,0 +1,166 @@
+/*BUTTONS
+--------------------------------------------------*/
+a.more_info {color:#354d80; background-image:url(more_inf.png); width:65px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 30px 6px 16px; margin:0; text-align:left;}
+a.more_info:hover {background-image:url(more_ing.png); cursor:pointer;}
+	
+a.membership {color:#3f5ea0; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0; text-align:center;}
+a.membership:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_over.png); cursor:pointer;}
+
+a.membership_text {color:#3f5ea0; background-image:url(membersh.png); width:204px; height:33px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 0px 0px 0px 0px; margin:0; text-align:center;}
+a.membership_text:hover {background-image:url(membersi.png); cursor:pointer;}
+
+a.membership_head {color:#ffffff; background-image:url(membersj.png); width:187px; height:21px; font-weight:bold;
+	display:inline-block; font-size:14px; text-decoration:none; padding: 8px 28px 6px 5px; margin:0; text-align:center;}
+a.membership_head:hover {background-image:url(membersk.png); cursor:pointer;}
+
+a.login {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/login.png); width:68px; height:19px; font-weight:bold;
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 13px; margin:0; text-align:center;}
+a.login:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/login_over.png); cursor:pointer;}
+
+a.login_text {color:#ffffff; background-image:url(login_te.png); width:109px; height:33px; font-weight:bold;
+	display:inline-block; font-size:13px; text-decoration:none; padding: 0px 0px 0px 0px; margin:0; text-align:center;}
+a.login_text:hover {background-image:url(login_tf.png); cursor:pointer;}
+
+a.send {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/send.png); width:133px; height:19px; font-weight:bold;
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 30px 6px 16px; margin:0; text-align:left;}
+a.send:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/send_over.png); cursor:pointer;}
+
+a.membership_orange {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_orange.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0 0 20px 0; text-align:center;}
+a.membership_orange:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_orange_over.png); cursor:pointer;}
+
+a.membership_bleu {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_bleu.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0 0 20px 0; text-align:center;}
+a.membership_bleu:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_bleu_over.png); cursor:pointer;}
+
+a.membership_vert {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_vert.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0 0 20px 0; text-align:center;}
+a.membership_vert:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_vert_over.png); cursor:pointer;}
+
+a.membership_violet {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_violet.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0 0 20px 0; text-align:center;}
+a.membership_violet:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_violet_over.png); cursor:pointer;}
+
+a.membership_nuit {color:#ffffff; background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_nuit.png); width:162px; height:19px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 8px 28px 6px 3px; margin:0 0 20px 0; text-align:center;}
+a.membership_nuit:hover {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_nuit_over.png); cursor:pointer;}
+
+/* PAGES
+--------------------------------------------------*/
+#main #tmain .center #content #cercles {text-align:center; padding:40px 0 40px 0; width:727px; background-repeat:no-repeat; 
+	background-image:url(http://www.closingcircle.com/Content/img/what_ombre1.png); background-position:left bottom; margin:0 0 0 -10px;}
+#main #tmain .center #content #objective {clear:left; padding:23px 0 0 0; width:727px; margin:10px 0 33px 0; background-repeat:no-repeat; 
+	background-image:url(http://www.closingcircle.com/Content/img/what_ombre2.png); background-position:left top; height:52px;}
+#objective h2 {margin:3px 0 0 3px; float:left;}
+#objective p.benefits {width:70%; float:left; clear:right; padding:0 0 0 63px; 
+	background-image:url(http://www.closingcircle.com/Content/img/what_fleche.png); background-position:30px 5px;}
+
+.they_joined_off {float:left; clear:left; margin:32px 0 22px 0; width:100%;}
+.they_joined_off .they_joined_logos {clear:left; padding:15px 0 0 0; margin:0;}
+.they_joined_off .they_joined_logos img {width:146px; margin-right:14px; border:1px solid #e5e6e6;}
+.they_joined_off .they_joined_logos img.last {margin-right:-1px;}
+					   
+.features {clear:left; padding:18px 0 0 0; margin:0 0 0 0; display:block; height:112px; }
+.features p {margin:0 0 10px 0; padding:0; display:inline-block; line-height:18px; width:555px;}
+.secure {height:128px;}
+.features img {float:left; margin: 4px 20px 15px 0; display:block;}
+
+.functionalities {clear:left; padding:0 15px 0px 0; margin:20px 0 0 0; display:block; }
+.functionalities p {margin:10px 0 0px 0; padding:0px 0 0 80px; background-position:247px 0px; width:auto; }
+.functionalities p.benefits {margin:0 0 0px 0; background-position:247px 3px; font-size:6px;}
+.functionalities p.dot {margin:0; padding: 7px 0 0 0; background-position:272px 13px;}
+.functionalities p.sub {margin:0; padding: 0 0 0 300px; background-position:302px 7px; }
+.functionalities img {float:left; margin: 5px 40px 0 20px; display:block;}
+
+#tableau { margin:15px 0 0 40px; color:#5f6572;}
+#tableau table {table-layout:fixed; background-image:url(http://www.closingcircle.com/Content/img/functionalitiesTable.png); background-position:4px 0; background-repeat:no-repeat;}
+#tableau table td { padding:0; margin:0; }
+#tableau table td p {padding: 0 20px 0 0; margin:0;}
+#tableau table td p.gauche {padding: 10px 10px 10px 10px; text-align:center;}
+#tableau table td p.separation {margin: 10px 20px 10px 0; border-top:1px dotted #c6c7cb; height:1px}
+
+#tab { margin:25px 0 30px 0; color:#5f6572;}
+#tab table {table-layout:fixed; background-position:-3px 0; background-repeat:no-repeat;}
+#tab table td { padding:0; margin:0; text-align:center; vertical-align:middle; }
+#tab table td p {padding: 3px 10px 10px 15px; margin:0;}
+#tab table td p img {padding: 0 0 0 0; margin:3px 0 -7px 0;}
+#tab table td p span {color:White; font-size:15px; text-transform:uppercase; display:inline-block; padding: 0; text-align:left;}
+#tab table td p.gauche {margin: 16px 0 16px 0;}
+
+#tab table td p img.puce {width:4px; height:4px; margin:0 3px 3px 0;}
+
+p.fleches {text-decoration:none; display:block; margin:0 0 0 0; padding:20px 0 15px 33px; width:87.9%; clear:both;
+	background-image:url(http://www.closingcircle.com/Content/img/fleche.png); background-position:6px 18px; background-repeat:no-repeat;}
+p.fleches span, p.fleches span a {display:inline; color:#6699ff; text-decoration:none;}
+p.fleches span a:hover {text-decoration:underline;}
+p.fleches span.gras {font-weight:bold; color:#46465d;}
+
+p.pastilles {text-decoration:none; display:block; margin:0 0 0 0; padding:20px 0 0px 40px; width:84.9%; clear:both;
+	background-image:url(http://www.closingcircle.com/Content/img/pastilleV.png); background-position:0px 14px; background-repeat:no-repeat;}
+p.pastilles span {color:#5f6572; line-height:18px;}
+p.pastilles span.gras {font-weight:bold; color:#486aae; font-size:14px; display:block; height:24px; margin:0;}
+
+p.comments {text-decoration:none; display:block; margin:0 0 0 0; padding:12px 0 12px 0px; width:94.9%; clear:both;}
+p.comments span {color:#5f6572; line-height:18px;}
+p.comments span.gras {font-weight:bold; color:#5f6572; display:block; height:24px; margin:0;}
+
+div.about p {line-height:18px; margin:18px 0 0 0; padding:0;}
+div.about ul {line-height:18px; margin:0 0 0 30px; padding:0;}
+
+p.espace_bas {margin-bottom:15px;}
+p.espace_haut {margin-top:15px;}
+
+#error_bar {background-color:#ffe4e3; background-position: 16px center;
+	background-repeat:no-repeat; background-image:url(http://www.closingcircle.com/Content/img/error_top2.png); 
+	width:97%; margin: 14px 0 0 0; padding:0px 0 0px 0;}
+#error_bar p {padding: 10px 0 10px 10%; margin:0;color:#ed655f; font-size:13px; font-weight:bold;}
+
+#green_bar {background-color:#ddf1c7; background-position: 16px center;
+	background-repeat:no-repeat; background-image:url(http://www.closingcircle.com/Content/img/valid_top.png); 
+	width:97%; margin: 14px 0 0 0; padding:0 0 0 0;}
+#green_bar p {padding: 10px 0 10px 10%; margin:0;color:#669900; font-size:13px; font-weight:bold;}
+
+#info_bar {background-color:#283a6c; width:97%; margin: 10px 0 0 0; padding:0 0 0 0;}
+#info_bar p {padding: 8px 0 8px 5%; margin:0;color:#ffffff; font-size:13px; font-weight:bold; line-height:20px;}
+
+#blue_form {background-color:#e3ecf3; width:97%; margin: 25px 0 0 0; padding:8px 0 8px 0;}
+#contact_form {width:526px; margin: 25px 0 0 0; padding:3px;}
+#contact_form .bg_bordure2 {margin: 0; padding:1px;}
+#contact_form .bg_blanc {margin: 0; padding:8px 0 8px 0;}
+
+#apply_top {color:#ffffff; background-repeat:no-repeat; background-image:url(http://www.closingcircle.com/Content/img/apply_top.png); line-height:20px;
+	width:95%; margin: 15px 0 0 0; padding:8px 0 8px 5%; height:49px; font-size:13px; font-weight:bold;}
+#error_top {color:#ed655f; background-repeat:no-repeat; background-image:url(http://www.closingcircle.com/Content/img/error_top.png); 
+	width:90%; margin: 10px 0 0 0; padding:6px 0 6px 10%; height:20px; font-size:13px; font-weight:bold;}
+
+/*FOOTER
+--------------------------------------------------*/    
+#footer {background-color:#1a2648; width:100%; padding:0 0 0 0; margin:0; height:100px; min-width:996px; position:relative;
+	background-image:url(footer_b.png); background-repeat:repeat-x; background-position:0 0;}
+#footer .colonne {float:left; padding:30px 10px 30px 10px; width:228px;}
+#footer .sharebox {float:left; padding:30px 0 30px 10px; width:242px;}
+#footer .colonne h1 {color:#6172a7; letter-spacing:normal; border:0; padding-bottom:12px; font-size:17px; font-weight:normal;}
+#footer .colonne a {color:#93abda; border-top:1px solid #606e99; font-size:12px; 
+	background-image:url(li_droit.png); background-repeat:no-repeat; background-position:0 10px;
+	margin:0 0 0 0px; padding:6px 0px 6px 12px; display:block; text-decoration:none;}
+#footer .colonne a.fleche_bas {background-image:url(li_bas00.png);}
+#footer .colonne a.dernier {border-bottom:1px solid #606e99;}
+#footer .colonne a.footerwho {border-top:1px dotted #606e99; margin:0 0 0 8px; padding:3px 0px 1px 0; background-image:none;}
+#footer .colonne a.footerwho span {padding:3px 0px 5px 0px; margin:0 0 0px 0; display:block;}
+#footer .colonne a.footerwho img {border:0; margin:0 6px 0 0; float:left;}
+#footer .colonne a:hover {color:#ffffff;}
+
+#footer p {color:#6885bf; font-size:10px; clear:left; float:left; padding:5px 5px 5px 5px; margin:0 0 0 0; 
+	background-position:0 0; background-repeat:no-repeat; width:900px;}
+#footer p i {font-style:normal; font-size:15px; text-transform:uppercase; font-family:Arial; display:inline-block; padding-right:15px;}
+#footer p b {font-weight:bold; font-size:15px; text-transform:uppercase; font-family:Arial}
+
+#footer #boutons {text-align:right; position:absolute; top:226px; right:0;}
+#footer a#contact {color:#93abda; background-image:url(contact_.png); width:73px; height:17px;
+	display:inline-block; font-size:13px; text-decoration:none; padding: 7px 30px 7px 16px; margin:0; text-align:left;}
+#footer a#membership {color:#93abda; background-image:url(membersl.png); width:144px; height:17px; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 7px 30px 7px 16px; margin:0; text-align:left;}
+#footer a#contact:hover, #footer a#membership:hover {color:White;}

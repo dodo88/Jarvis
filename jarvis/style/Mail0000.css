@@ -1,0 +1,219 @@
+.mailsearch {width:166px; background-color:#e9e9e9; border-bottom:1px solid #d1d2d6; border-left:1px solid #d1d2d6; 
+	padding:12px 12px 12px 12px; height:50px;}
+.mailsearch p {font-size:12px; font-weight:bold; color:#5f6572; padding:0 0 10px 0; margin:0;}
+.mailsearch input {font-size:12px; font-weight:bold; color:#5f6572; background-color:#ffffff; 
+	border:1px solid #cbcbcd; float:left; height:16px; width: 128px; padding:4px;}
+.mailsearch a {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailsearch.png); height:26px;width:25px; display:block; float:left;}
+.mailsearch input[type="text"] {font-weight:normal; color:#283a6c;} 
+
+.mailsend {width:191px; background-color:#e9e9e9; padding:0; cursor:pointer;}
+.mailsend p {font-size:12px; font-weight:bold; color:#5f6572; border-left:1px solid #cbcbcd; border-bottom:1px solid #cbcbcd;
+	background-image:url(https://www.closingcircle.com:443/Content/img/buttons/send_message.png); background-repeat:no-repeat; background-color:#ffffff; 
+	margin: 0 0 1px 0; height:34px;width:134px; padding:22px 0 0 56px; display:block; text-decoration:none; }
+.mailsend:hover p {text-decoration:underline}
+
+h2 {font-size:17px; font-weight:bold; border:0; color:#5f6572; width:231px; text-transform:uppercase;}
+
+/*Read*/
+.list_header {background-image:url(https://www.closingcircle.com:443/Content/img/list_header_top.png); height:33px; width:771px; border:0; margin:15px 0 0 0; padding:8px 5px 6px 5px;}
+.list_header p.gauche {float:left; padding:0 50px 0 5px; margin:0; font-size:11px; background-repeat:no-repeat; background-position: 90% 3px;}
+.list_header p.droite {float:right; padding:0 5px 0 13px; margin:0; font-size:11px; background-repeat:no-repeat; background-position: 0 3px;}
+.list_header p.droite select {font-size:11px;}
+.list_header p.petit {padding-top:5px; padding-bottom:5px; background-image:url(https://www.closingcircle.com:443/Content/img/separateur.png); }
+
+.list_header p a { margin:0 6px 0 0; color:#9da1a8; font-size:13px; font-weight:bold; text-decoration:none; float:left;}
+.list_header p a.forward {padding:8px 0 6px 45px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailforward.png); display:block; width:71px; height:17px;}
+.list_header p a.reply {padding:8px 0 6px 50px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailreply.png); display:block; width:66px; height:17px;}
+.list_header p a.forward:hover, .list_header p a.reply:hover {color:#5f6572;}
+.list_header p a.delete {padding:8px 0 6px 33px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/maildelete.png); color:#5f6572; display:block; width:70px; height:19px;}
+.list_header p a.delete:hover {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/maildelete_hover.png);}
+.list_header p span.readonly { margin:0 6px 0 0; font-size:13px; font-weight:bold; text-decoration:none; float:left;
+	padding:8px 0 6px 33px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/maildelete_inactif.png); color:#9da1a8; width:70px; height:19px;}
+
+.list_table {border-collapse:collapse; border-spacing:0; width:781px; margin:1px 0 0 0;
+	background-image:url(https://www.closingcircle.com:443/Content/img/bg_sorting.png); background-repeat:repeat-x; background-position:0px 0px;}
+.list_table th {background-color:#f8f8f8; border-bottom:1px solid #d2d2d2; border-top:0; border-left:0; border-right:0; margin:0;
+	color:#afafaf; padding:0 0 0 5px; font-size:11px; font-weight:normal; height:25px; vertical-align:middle; text-align:left;}
+.list_table th.sortby {background-color:transparent; color:#5f6572; border-left:1px solid #d2d2d2; border-right:1px solid #d2d2d2;
+	background-repeat:no-repeat; background-position:98% center;}
+.list_table th.sortby:hover {cursor:pointer;}
+.list_table th.sortup {background-color:#dfecfc; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/sortby_gris.png);}
+.list_table th.sortdown {background-color:#dfecfc; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/sortby_bleu.png);}
+.list_table th.sort {background-color:#dfecfc; }
+
+.list_table th.name {padding-left:34px;}
+
+.list_table td {border-bottom:1px solid #e9e9e9;}
+.list_table td.col_letter p {color:#b85036; font-size:14px; font-weight:bold; padding:3px 0 3px 30px; margin:0;}
+.list_table td.col_checkbox {width:34px; text-align:center;}
+
+.list_table td.col_person {width:396px; padding:10px 0 10px 0; vertical-align:top;}
+.list_table td.col_person p {padding:0 0 2px 0; margin:0; line-height:14px;}
+.list_table td.col_person p .photo {float:left; padding:2px 8px 0 0;}
+.list_table td.col_person p .photo img {width:55px; height:55px; border:0; border:1px solid #e8e8e8;}
+.list_table td.col_person p span.gris {color:#5f6572; font-size:12px;}
+.list_table td.col_person p .bleu {font-size:12px; text-transform:none; text-decoration:none;}
+.list_table td.col_person p	a.bleu span {text-decoration:none; color:#477eec;}
+.list_table td.col_person p a.bleu:hover span {text-decoration:underline;}
+.list_table td.col_person p .nuit {font-size:12px; text-transform:none; text-decoration:none;}
+.list_table td.col_person p	span.nuit a {text-decoration:none; color:#283a6c;}
+.list_table td.col_person p span.nuit a:hover  {text-decoration:underline;}
+.list_table td.col_person p span.newline {display:block; height:14px; overflow:hidden;}
+.list_table td.col_person p span.small {font-size:11px;}
+
+.list_table td.col_subject {width:258px; padding:10px 0 10px 0; vertical-align:top;}
+.list_table td.col_subject a {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailaction.png); width:58px; height:14px; display:block; float:left;
+	color:#5f6572; font-size:9px; margin:10px 0px 5px 5px; padding: 2px 0 0 0; text-align:center; text-decoration:none;}
+.list_table td.col_subject a:hover {text-decoration:underline;}
+.list_table td.col_subject .read {color:#477eec; font-size:12px; padding:0 0 2px 5px; margin:0; line-height:14px;
+	background-image:none; float:none; width:240px; height:auto; text-align:left; overflow:hidden;}
+.list_table td.col_subject .message {color:#46465d; font-size:12px; font-weight:bold; padding:0 0 2px 5px; margin:0; line-height:14px;
+	background-image:none; float:none; width:auto; height:auto; text-align:left; }
+.list_table td.col_subject a.actionblue {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailaction_blue.png); width:60px; color:#ffffff;}
+.list_table td.col_subject a.actiongreen {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailaction_green.png); width:60px; color:#ffffff;}
+.list_table td.col_subject a.actionlarge {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailaction_large.png); width:103px; color:#ffffff;}
+
+.list_table td.buttons a {font-weight:bold;}
+.list_table td.col_date {width:90px; vertical-align:top; padding: 10px 0 10px 5px; color:#96999f; font-size:11px;}
+
+.list_footer {background-color:#ebebeb; border-bottom:1px solid #d2d2d2; border-top:1px solid #ffffff; margin:0 0 15px 0}
+.list_footer p {margin:0; padding:5px 34px 5px 34px; font-size:11px;}
+
+
+/*Send*/
+.sendbox {padding:0 0 0px 0; margin:0;}
+.sendbox label {color:#96999f; font-size:12px; float:left; clear:left; width:55px; display:block; margin:5px 5px 5px 0; text-align:right;}
+.sendbox span {color:#96999f; font-size:12px; font-weight:bold; display:block; margin:5px 5px 5px 60px; text-align:left;}
+.sendbox input[type="text"], .sendbox textarea {color:#46465d; font-size:12px; float:none; width:85%; padding:3px; margin:5px 0 5px 0; border:1px solid #cbcbcd;}
+.sendbox textarea {height:240px; resize:none; line-height:18px; font-size:12px !important; margin:5px 0 5px 60px; display:block;}
+.sendbox .field-validation-error {color:#d95f5c; font-size:11px; height:13px; font-weight:normal; display:block; float:none; clear:left; padding:1px; margin:0 0 0 60px;}
+
+.sendbox .receivers {font-size:12px; float:none; width:85%; padding:0 3px 3px 3px; margin:5px 0 5px 0; border:1px solid #cbcbcd; border-collapse:collapse; min-height:20px; display:inline-block;}
+.sendbox .receivers input {background-color:transparent; margin:0; border:0; float:left;}
+.sendbox .receivers input[type="text"] {background-color:transparent; width:auto; color:#46465d;}
+.sendbox .receivers span.contact_bleu {color:#46465d; font-size:12px; font-weight:normal; padding:5px 25px 5px 5px; margin:3px 3px 0 0px; 
+	background-color:#d8e8f4; height:12px; width:auto; display:block; float:left; position:relative; white-space:nowrap;}
+.sendbox .receivers span.contact_bleu span {position:absolute; top:5px; right:5px; margin:0; padding:0; 
+	background-image:url(https://www.closingcircle.com:443/Content/img/buttons/delete_selected.png); width:13px; height:13px;}
+.sendbox .receivers span.contact_bleu span:hover {cursor:pointer; top:6px; right:6px;}
+
+.sendbox p.bottom {margin:0; padding:5px 0 0px 0; height:33px; width:100%;}
+
+a.cancel_message, input.send_message {color:#5f6572; font-size:13px !important; font-weight:bold; height:21px; text-align:center; display:block; 
+	margin:0px 0 0px 0; border:0; background-repeat:no-repeat; padding:5px 0 5px 0; text-decoration:none; background-color:transparent;}
+a.cancel_message {margin-left:60px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailsend_cancel.png); width:101px; padding:7px 0 3px 0; float:left;}
+input.send_message {margin-left:6px; background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailsend_valid.png); width:116px; padding-left:10px; height:30px; float:none;}
+input.send_message:hover {cursor:pointer;}
+
+.sendgris {background-color:#f8f8f8; height:auto; border-top:#d1d2d6 1px solid; width:781px; padding:10px 0 10px 0;}
+.sendgris input[type="text"] {float:none;}
+.sendgris textarea {float:none;}
+.sendgris input.send_message {float:none;}
+.send_invite textarea {height:120px;}
+
+.error_bar {background-color:#ffe4e3; background-position: 16px center;  background-repeat:no-repeat; background-image:url(https://www.closingcircle.com:443/Content/img/error_top2.png); 
+   width:100%; margin: 14px 0 14px 0; padding:0px 0 0px 0;}
+.error_bar p {padding: 10px 0 10px 50px; margin:0;color:#ed655f; font-size:13px; font-weight:bold; width:auto; height:auto;}
+.green_bar {background-color:#ddf1c7; background-position: 16px center; background-repeat:no-repeat; background-image: url(https://www.closingcircle.com:443/Content/img/valid_top.png); 
+   width:100%; margin: 15px 0 0px 0; padding:0 0 0 0;}
+.green_bar p {padding: 10px 0 10px 50px; margin:0;color:#669900; font-size:13px; font-weight:bold; width:auto; height:auto;}
+
+
+/*Reply*/
+.historique {border:1px solid #e5e4e4; padding:0px 10px 0px 10px; margin:10px 0 0 95px;}
+.historeply {margin:10px 28px 0 62px;}
+.historique p {color:#46465d; font-size:12px; padding:0 0px 0 0px; margin:0; height:24px;}
+.historique p.haut {color:#283a6c; font-weight:bold; padding-top:10px; height:16px;}
+.historique p.bas {border-bottom:1px dotted #ababab; padding-bottom:10px; height:auto; line-height:18px;}
+.historique p.last {border-bottom:0;}
+.historique p.body {color:#000000;}
+
+/*Details*/
+.message_detail {}
+.message_detail p.subject {padding:10px 15px 8px 15px; margin:0; background-color:#f8f8f8; color:#96999f; font-size:12px; border-bottom:1px solid #dfdfdf;}
+.message_detail p.subject span {padding:0; margin:0; color:#000000; font-size:13px; font-weight:bold;}
+
+.message_detail p.top {padding:12px 15px 10px 15px; margin:0; background-color:#f8f8f8;}
+.message_detail p.top .photo {float:left; padding:2px 8px 0 0;}
+.message_detail p.top .photo img {width:55px; height:55px; border:0;}
+.message_detail p.top span {display:inline; padding:0; margin:0;}
+.message_detail p.top a {display:inline; padding:0; margin:0;}
+.message_detail p.top .gris {color:#46465d; font-size:12px; text-decoration:none;}
+.message_detail p.top a.gris:hover {text-decoration:underline;}
+.message_detail p.top .bleu {color:#354d80; font-size:12px; font-weight:bold; text-transform:none; text-decoration:none;}
+.message_detail p.top a.bleu span {text-decoration:none;}
+.message_detail p.top a.bleu:hover span {text-decoration:underline; cursor:pointer;}
+.message_detail p.top span.nuit {color:#283a6c; font-size:12px; text-transform:none;}
+.message_detail p.top span.small {font-size:11px;}
+.message_detail p.top span.label {color:#96999f; width:46px; height:19px; text-align:right; padding-right: 5px; 
+	overflow:hidden; display:inline-block; font-size:12px;}
+.message_detail p.top span.categories {padding-top:2px; height:17px;}
+.message_detail p.top .newline {display:inline-block; height:19px; width:594px; overflow:hidden;}
+.message_detail p.top .newline span {display:inline;}
+.message_detail p.top .firstline a {}
+
+.message_detail p.body {padding:10px 10px 10px 10px; margin:10px 0 0 95px; color:#000000; font-size:12px; 
+	border:1px solid #e5e4e4; background-color:#ffffff; line-height:18px;}
+
+.message_surf {float:right; width:532px; text-align:right; color:#5f6572; font-size:11px;}
+.message_surf a {color:#5f6572; text-decoration:none;}
+.message_surf a:hover {text-decoration:underline;}
+.message_surf a.back, .message_surf a.previous, .message_surf a.next {background-repeat:no-repeat; height:16px; display:block; text-align:left; padding-top:1px;}
+.message_surf a.back {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/page_first.png); width:auto; padding-left:30px; border-left:1px solid #d2d6da;
+	background-position:10px top; float:left;}
+.message_surf a.previous {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/page_previous.png); width:47px; padding-left:25px;float:right; }
+.message_surf a.next {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/page_next.png); width:56px; padding-left:15px;float:right; }
+.large {width:100%; padding:23px 0 68px 0;}
+.large a.back {border-left:0; padding-left:20px; background-position:left top}
+
+
+/*Invitations*/
+.invitations {border-top:1px solid #d2d2d2; margin-top:15px;}
+.invitations td.col_person {width:auto;}
+.invitations td.col_subject {width:306px;}
+.invitations td.col_subject .accepted {color:#669933; font-size:12px; display:block; padding: 0 0 0 18px; 
+	background-image:url(https://www.closingcircle.com:443/Content/img/buttons/accepted.png); background-repeat:no-repeat; background-position:5px center;}
+.invitations td.col_date a {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/mailaction.png); width:58px; height:14px; display:block;
+	color:#5f6572; font-size:9px; font-weight:bold; margin:30px 0px 5px 0; padding: 2px 0 0 0; text-align:center; text-decoration:none;}
+
+/*contacts*/
+.center .bg_gris {background-color:#f4f4f4; width:191px; height:99.8%; 
+	position:absolute; z-index:0; border-left:1px solid #e9eaeb; margin:0;}
+.alphabet {font-size:0px; padding:10px 10px 10px 10px; height:100%; border:1px solid #ffffff; border-bottom:1px solid #e9eaeb;
+	background-color:transparent; background-image:url(https://www.closingcircle.com:443/Content/img/contacts_bg.png); background-repeat:repeat-x; margin:0 0 0 1px;}
+.alphabet .lettre_filtre {display:inline-block; padding:2px 3px 3px 3px; margin:1px; font-size:13px;
+	color:#ffffff; text-decoration:none; text-align:center; border:0; outline:0;}
+.alphabet .dispo {background-color:transparent; width:15px; height:16px; background-image:url(https://www.closingcircle.com:443/Content/img/lettre_dispo.png);}
+.alphabet .dispo:hover {text-decoration:underline; background-color:transparent;}
+.alphabet .nodispo {background-color:transparent; width:15px; height:16px; background-image:url(https://www.closingcircle.com:443/Content/img/lettre_nodispo.png);}
+.alphabet .active {background-color:transparent; width:38px; height:16px; background-image:url(https://www.closingcircle.com:443/Content/img/lettre_active.png);}
+.alphabet .active:hover {text-decoration:underline; background-color:transparent;}
+
+.contacts {table-layout:fixed; margin-top:15px;}
+.contacts th {background-color:transparent; background-image:url(https://www.closingcircle.com:443/Content/img/thl_contacts.png); padding:0;}
+.contacts th.selected {background-color:transparent; background-image:url(https://www.closingcircle.com:443/Content/img/thr_contacts.png); width:265px;}
+.contacts td.col_subject {width:180px;}
+.contacts td {border-left:1px solid #dedfe2; padding:0;}
+.contacts td .selected_div {border-right:1px solid #dedfe2; height:523px; overflow:scroll; font-size:1px;}
+.contacts td .list_div {height:523px; overflow:scroll;}
+.contacts td table td{border-left:0;}
+
+.contacts td .selected_div .mailsend {width:248px; background-color:transparent;}
+.contacts td .selected_div .mailsend p {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/send_message2.png); 
+	width:160px; height:57px; padding:40px 0 0 80px; border:0; margin:4px;}
+
+.contacts td .selected_div span.contact_bleu {background-color:#d8e8f4; display:block; padding:5px 20px 5px 5px; margin:4px; 
+	height:auto; width:215px; position:relative;}
+.contacts td .selected_div span.contact_bleu label {font-size:12px; color:#46465d; float:none;}
+.contacts td .selected_div span.contact_bleu span {background-image:url(https://www.closingcircle.com:443/Content/img/buttons/delete_selected.png); display:inline-block;
+	width:13px; height:13px; margin:auto 1px auto 0; position:absolute; right:2px;}
+.contacts td .selected_div span.contact_bleu span:hover {margin:1px 0 0 0;}
+
+.titre_fleche {background-image:url(https://www.closingcircle.com:443/Content/img/arrow_down.png); background-position:10px 10px; background-repeat:no-repeat;
+	display:block; padding:3px 0 3px 25px; font-size:12px; font-weight:bold; color:#5f6572;}
+.view {padding-left:20px; background-position:5px 10px;}
+
+.headerImage .ui-dialog-titlebar {background-image: url(https://www.closingcircle.com:443/Content/img/logo_popin.png) !important; background-repeat:no-repeat; background-position: 20px 7px;}
+.headerTitle .ui-dialog-titlebar {background-image: none !important;}
+
+#main2 .center a.backtop {clear:both;}

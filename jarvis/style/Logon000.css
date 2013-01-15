@@ -1,0 +1,45 @@
+div.logon_bordure {width:639px; margin:50px auto 50px auto; padding:3px;}
+div.logon_bordure .bg_bordure2 {margin: 0; padding:1px;}
+div.logon_bordure .bg_blanc {margin: 0; padding:12px 26px 12px 26px;}
+
+div.logon_bordure h1 {color:#1c294d; font-weight:bold; font-size:22px; text-transform:uppercase; letter-spacing:normal; width:auto;}
+
+div.logon_bordure div.bloc {background-color: #e3ecf3; padding: 27px 0 17px 0; width:100%; margin:16px 0 8px 0;}
+
+div.logon_bordure div.bloc p {padding: 0px 0 0px 0; margin:0; height:50px;}
+div.logon_bordure div.bloc p label {color:#283a6c; font-weight:bold; font-size:12px; line-height:12px; float:left; width:145px; display:block;
+	padding:4px 10px 4px 0; border-right:1px solid #b5c8d6; margin:0 3px 0 0; text-align:right; }
+div.logon_bordure div.bloc p input[type="password"],
+div.logon_bordure div.bloc p input[type="text"] {margin:0; padding:2px 0 2px 3px; float:left; color:#283a6c;
+	line-height:18px; font-size:12px; height:17px; outline:0; width:310px; border: 1px solid #b5c8d6;}
+div.logon_bordure div.bloc p input[type="password"] {width:163px}
+div.logon_bordure div.bloc p span.button_forgot {background-color:#bbcdda; color:#ffffff; text-decoration:none; 
+	font-size:9px; font-weight:bold; padding:4px 12px 4px 12px; margin:3px 0 0 10px; float:left;}
+div.logon_bordure div.bloc p span.button_forgot:hover {text-decoration:underline; cursor:pointer;}
+
+div.logon_bordure div.bloc div.remember {padding:0 0 20px 135px; margin:5px 15px 15px 15px; border-bottom:1px solid #c7d2e1;}
+div.logon_bordure div.bloc div.remember input[type="checkbox"] {}
+div.logon_bordure div.bloc div.remember label {font-size:12px; color:#76849d;}
+
+div.logon_bordure div.bloc input.login {color:#ffffff; background-image:url(login200.png); width:109px; height:33px; 
+	font-weight:bold; background-color:transparent; background-position:0 0; background-repeat:no-repeat; border:0;
+      display:inline-block; font-size:13px; text-decoration:none; padding: 7px 28px 8px 13px; margin:0 0 0 152px; text-align:center;}
+div.logon_bordure div.bloc input.login:hover {background-image:url(login2_o.png); cursor:pointer;}
+
+div.logon_bordure p.already {padding: 0px 0 0px 0; margin:0; color:#5f6572; font-size:13px; height:22px;}
+div.logon_bordure p.already a {padding: 0px 0 0px 0; margin:0; color:#6699ff; font-size:13px; text-decoration:none;}
+div.logon_bordure p.already a:hover {text-decoration:underline;}
+
+.ui-dialog {}
+.ui-dialog .ui-dialog-titlebar {background-image: url(logo_popin.png) !important; background-repeat:no-repeat; background-position: 20px 7px;}
+.ui-dialog .ui-dialog-content {overflow:hidden !important;}
+
+.sendpass {height:190px;}
+.sendpass span {margin-left:0;}
+.sendpass span.title {color:black; margin:0; padding:20px 0 20px 0; display:block;}
+.sendpass input[type="text"] {width:300px; float:none; display:block; margin-bottom:15px;}
+.sendpass a.cancel_message, .sendpass input.send_message {float:right; margin:0;} 
+.sendpass .field-validation-error {margin:0;}
+.sendpass form {padding:0; margin:0; height:160px;}
+
+.changepass {margin-bottom:100px !important;}

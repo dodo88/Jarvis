@@ -1,0 +1,277 @@
+/*----------------------------------------------------------
+----------------------------------------------------------*/
+body {background-color:#ffffff; font-family:Tahoma, Geneva, Arial; margin:0; padding:0; position:relative;}
+input, option {font-family:Arial, Tahoma, Geneva;}
+textarea {font-family:Arial, Tahoma, Geneva; resize:none;}
+form {margin:0; padding:0;}
+
+.middle {margin:0 auto 0 auto; width:996px; position:relative;}
+.topmiddle {margin:0 auto 0 auto; width:996px;}
+
+#page {width: 100%; margin:0; padding:0; position:relative;}
+#cache, .cache {height:0px; position:absolute; top:-100px}
+
+#logo {width:100%; height:48px; background-color:White; padding:10px 0 10px 0; margin:0; min-width:998px;}
+#logo a.return {padding:0; margin:0; display:inline-block; float:left;}
+#logo img {margin:0; padding:0 0 0 12px; height:48px; width:286px; border:0;} /*-- width:253px--*/
+#logo #login {margin:0; width:692px; float:left; text-align:right; padding:0px 0 3px 0;} /*--width:725px--*/
+
+#menu_top {width:100%; background-color:#1c294d; height:33px; margin:0; padding:0;
+		   border-bottom:1px solid #131b32; border-top:1px solid #131b32; min-width:996px; position:relative;}
+#menu_top .middle {width:996px;}
+#menu_top a {background-image:url(menu_top.png); background-repeat:repeat-x; background-color:transparent; 
+			 border-right:1px solid #131b32; border-left:1px solid #283a6c; display:block; float:left;
+			 color: #93abda; text-transform:uppercase; text-decoration:none; font-size:13px; 
+			 height:13px; padding:9px 14px 11px 14px; margin:0;}
+#menu_top a:hover, #menu_top a.hover {color: #ffffff;}
+#menu_top a:active, #menu_top a.actif {color: #ffffff; background-color:#283a6c;}
+#menu_top .left {display:block; float:left; border-right:1px solid #131b32; height:33px;}
+#menu_top .right {display:block;float:left; border-left:1px solid #283a6c; height:33px;}
+#menu_top .menu_sp { float:right; }
+
+#header {width:100%; background-image:url(header_b.png); border-bottom:0px solid #889fc2; min-width:998px;}
+#header #header_big {background-image:url(header_c.png); background-repeat:no-repeat; height:222px; margin:0 auto 0 auto; width:996px; position:relative;}
+#header #header_big #title {font-size:33px; color:White; padding: 33px 0 40px 40px; float:left;}
+#header #header_big #subtitle {font-size:21px; color:White; /*padding:42px 0 0 13%; */float:left; padding: 160px 0 0;}
+#header #header_big #apply {padding:20px 0 0 13%; margin:0; float:left; font-weight:bold; position:absolute; top: 140px; left: 295px;}
+#header #header_small {background-repeat:no-repeat; background-position:left bottom; height:75px; margin:0 auto 0 auto; width:996px;}
+#header .header_tour {background-image:url(http://www.closingcircle.com/Content/img/header_bg_tour.png);}
+#header .header_who {background-image:url(http://www.closingcircle.com/Content/img/header_bg_who.png);}
+#header .header_contact {background-image:url(http://www.closingcircle.com/Content/img/header_bg_contact.png);}
+#header .header_member {background-image:url(http://www.closingcircle.com/Content/img/header_bg_member.png);}
+#header #header_small #title {font-size:33px; color:White; padding: 18px 0 17px 39px; margin:0;}
+
+
+#main {width:100%; position:relative; background-image:url(content_.png); background-repeat:repeat-x; 
+	   background-color:#f5f5f5; margin:0;}
+#main #tmain { padding:0; margin:0 auto 0 auto; border:0; border-collapse:collapse; border-spacing:0; position:relative;}
+#main #tmain tr { position:relative;}
+#main #tmain td.espace {padding:0; margin:0; border:0; vertical-align:top; position:relative;}
+#main #tmain td.arrow_under {font-size:1px;}
+#main #tmain .center {background-color:White; background-image:url(content_.png); background-repeat:repeat-x; 
+	width:994px; position:relative;}
+#main #tmain .border_left {background-image:url(content0.png); background-repeat:repeat-y; 
+	background-position:right top; width:8px; text-align:right; position:relative;}
+#main #tmain .border_right {background-image:url(content1.png); background-repeat:repeat-y; width:8px; position:relative;}
+
+#main #tmain .center img.fleche {margin:0 0 0 0; padding:0 0 0 10%; font-size:1px; position:relative; z-index:1;}
+.center img.ombre_v {position:absolute; z-index:0; top:1px; left:0px;}
+
+#main #tmain .center #content {padding:26px 8px 0px 8px; font-size:13px; color:#5f6572; width:978px; position:relative;}
+
+#main #tmain .center #content .left {float:left; padding:0 1% 0 0; margin:0; position:relative;}
+#main #tmain .center #content .right {float:left; padding:0 0 0 1%; margin:0; position:relative;}
+
+#main #tmain .center #content .menu_left,
+#main #tmain .center #content .menu_left2 {float:left; width:21.5%; padding:0 2.9% 0 0.5%; margin:0; position:relative;}
+#main #tmain .center #content .menu_right,
+#main #tmain .center #content .menu_right2 {float:left; width:74.3%; padding:0 0 0 0.6%; margin:0; position:relative;}
+
+#main #tmain .center a.backtop {background-image:url(backtop0.png); background-position:right 13px; background-repeat:no-repeat; 
+								text-align:right; padding:10px 12px 0px 0; margin:0px 0px 0 0; display:block; clear:left; float:none;
+								font-size:12px; color:#6699ff; text-decoration:none; height:25px;}
+
+/*CONTENT
+------------------------------------------------*/
+.barre {width:100%; height:18px; background-image:url(barre000.png); background-repeat:repeat-x; margin:1px 0 0 0; padding:0; clear:both;}
+.barre2 {width:100%; height:1px; border-top: 1px solid #d8d9dc; margin:15px 0 15px 0; clear:both;}
+.barre3 {width:100%; height:1px; background-color:#cbd5eb; margin:0 0 0 0; clear:both; 
+	border-top:1px solid white; border-bottom:1px solid white;}
+.barre4 {width:100%; height:1px; border-top:1px dotted #c8d2e7; clear:both;}
+.barre5 {width:100%; height:1px; border-top: 1px solid #d8d9dc; margin:32px 0 22px 0; clear:both;}
+
+a {outline:0;}
+p {color:#5f6572; font-size:13px; }
+
+h1 {padding:0 0 8px 0; margin:0 0 0 0; color:#46465D; line-height:16px; border:0;
+	font-size:17px; font-weight:normal; text-transform:uppercase; letter-spacing:4px;}
+
+h2 {padding:0px 0 0 11px; margin:0 0 0 3px; color:#46465D; line-height:19px; 
+	font-size:22px; font-weight:normal; border-left:3px solid #b85036;}
+h2.stitle {padding:2px 0 2px 16px; margin:0 0 0 16px; color:#46465D; line-height:9px; height:9px;
+			font-size:13px; font-weight:bold; border-left:1px solid #b85036;}
+h2.inter {font-size:11px; line-height:8px; height:8px;}
+h2.big_space {margin:26px 0 0 0; font-weight:bold; font-size:20px;}
+
+a.stitle {padding:0 0 0 16px; margin:2px 0 0 16px; color:#b85036; line-height:12px;
+		font-size:12px; font-weight:normal; border-left:1px solid #b85036; text-decoration:none;}
+a.stitle:hover {text-decoration:underline;}
+
+h3 {padding: 10px 0 0 20px; margin:0; color:#46465d; font-size:15px; font-weight:bold; line-height:15px;}
+h4 {padding: 5px 0 0 0; margin:0; font-size:19px; font-weight:bold; color:#283a6c; text-transform:uppercase;}
+h4.stitle {padding: 15px 0 0 17px; margin:0; font-size:14px; font-weight:bold; color:#46465d; text-transform:none;}
+
+.gras {font-weight:bold;}
+.uppercase {text-transform:uppercase;}
+
+a.mailto {display:inline; color:#6699ff; text-decoration:none;}
+a.mailto:hover {text-decoration:underline;}
+
+h1 a.version {float:right; clear:none; font-size:12px; text-transform:none; text-decoration:none; color:#6699ff; letter-spacing:normal;}
+h1 a.version:hover {text-decoration:underline;}
+
+div.bg_blanc {background-color:#ffffff}
+div.bg_bleu {background-color:#DFF0F6}
+div.bg_nuit {background-color:#DCE9F3}
+div.bg_orange {background-color:#FBEBD7}
+div.bg_vert {background-color:#E4F0D9}
+div.bg_violet {background-color:#EDE9F5}
+div.bg_rouge {background-color:#F9EEEE}
+div.bg_gris {background-color:#ededed}
+div.bg_trans {background-color:#f8f8f8}
+div.bg_refine {background-color:#e9e9e9}
+div.bg_ocean {background-color:#bed8ec}
+div.bg_bordure1 {background-color:#f2f3f4}
+div.bg_bordure2 {background-color:#d3dae0}
+div.bg_bordure3 {background-color:#d1d2d6}
+
+.nuit {color:#4e99d3;}
+.nuit2 {color:#3e84ba;}
+.bleu {color:#04bcf1;}
+.bleu2 {color:#23a7cd;}
+.orange {color:#e4752b;}
+.orange2 {color:#fe8a3b;}
+.vert {color:#5c8c2c;}
+.vert2 {color:#80a55b;}
+.violet {color:#8F79B9;}
+.violet2 {color:#8f79b9;}
+.rouge {color:#A4324D;}
+.rouge2 {color:#b85036 ;}
+.marron {color:#482F22;}
+.nuit, .bleu, .orange, .vert, .violet, .rouge, .marron {text-transform:uppercase;}
+
+.couleur_bleu {color:#477eec;}
+.couleur_marine {color:#354d80;}
+.couleur_ciel {color:#7183b4;}
+.couleur_nuit {color:#283a6c;}
+.couleur_rouge {color:#b85036;}
+.couleur_gris {color:#95979c;}
+	
+a.who {text-decoration:none; color:#5f6572; background-color:#ededed; display:inline-block; 
+		font-size:13px; margin:1px 0 0 0; padding:0; width:100%;}
+a.who:hover {background-color:#e3ecf3; cursor:pointer;}
+a.who span {margin:12px 0 8px 4px; display:inline-block;}
+a.who img {border:0; float:left; margin:9px 0 5px 8px; }
+a.borduretop {border-top:1px solid #e5e6e6;}
+a.bordurebottom {border-bottom:1px solid #e5e6e6;}
+a.who_member {background-color:#e9e9e9;}
+
+div.whoIndex {margin:15px 0 0 0; clear:left; padding:15px 0 66px 0; font-size:0;}
+div.whoIndex a.who {margin:0 0 5px 16px; padding:8px 10px 8px 10px; width:95%; border:0; height:64px; outline:0;}
+div.whoIndex a.who span {float:left;font-size:18px; margin-top:20px; width:205px;}
+div.whoIndex a.who span.small {float:left;font-size:13px; margin-top:22px; width:auto;}
+div.whoIndex a.who img {margin:0; padding:0;}
+div.whoIndex a.who img.arrow {float:left; margin:18px 34px 0 0;}
+div.whoIndex a.search {margin-left:0; width:100%; padding-left:0; padding-right:0;}
+div.whoIndex a.search span {width:254px;}
+div.whoIndex a.search span.threelines {margin-top:8px; line-height:18px;}
+div.whoIndex a.search span.twolines {margin-top:15px; line-height:18px;}
+div.whoIndex a.search span span.details {float:none;font-size:13px; margin:0; padding:0; width:auto;}
+div.whoIndex a.search img {margin-left:10px;}
+div.whoIndex a.search span.membership {color:#ffffff; width:185px; height:17px; text-align:center; float:right; 
+	display:inline-block; font-size:13px; text-decoration:none; padding: 6px 18px 6px 3px; margin:15px 15px 0 0;}
+div.whoIndex a.search span.membership_orange {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_orange2.png);}
+div.whoIndex a.search span.membership_bleu {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_bleu2.png);}
+div.whoIndex a.search span.membership_vert {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_vert2.png);}
+div.whoIndex a.search span.membership_violet {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_violet2.png);}
+div.whoIndex a.search span.membership_nuit {background-image:url(http://www.closingcircle.com/Content/img/buttons/membership_nuit2.png);}
+
+p.who {text-decoration:none; color:#5f6572; background-color:#ffffff; display:block; float:left;
+	margin:0; padding:20px 0px 10px 16px; width:30%; height:20px;}
+p.who span {padding:8px 0 8px 0; margin:0 0 0 0; display:inline-block; font-size:13px; }
+p.who span.nuit, p.who span.bleu, p.who span.orange, 
+p.who span.vert, p.who span.violet, p.who span.rouge, p.who span.marron {padding:7px 0 7px 0; font-size:14px;}
+p.who img {border:0; float:left; margin:0 6px 0 0; padding:0;}
+
+p.benefits {text-decoration:none; display:block; margin:0 0 0 0; padding:16px 0 0 42px; width:87.9%;
+			background-image:url(v0000000.png); background-position:12px 20px; background-repeat:no-repeat;}
+p.benefits span {display:inline; font-size:13px; line-height:17px;}
+p.benefits span.gras {font-weight:bold; color:#486aae; font-size:14px;}
+
+p.dot {padding: 7px 0 0 40px; margin:0; display:list-item; list-style-type:none; text-indent:10px;
+		background-image:url(http://www.closingcircle.com/Content/img/dot_blue.png); background-repeat:no-repeat; background-position:40px 13px; }
+p.nodot {padding: 7px 0 0 42px; margin:0; display:list-item; list-style-type:none; text-indent:0px;}
+p.sub {padding: 0 0 0 80px; margin:0; display:list-item; list-style-type:none; text-indent:10px;
+		background-image:url(http://www.closingcircle.com/Content/img/dot_gray.png); background-repeat:no-repeat; background-position:80px 7px; }
+
+a.menu {text-decoration:none; color:#354d80; background-color:transparent; display:inline-block; 
+		font-size:14px; margin:0 0 0 0; padding:6px 0 7px 5%; width:94.9%; position:relative;}
+a.menu:hover {background-color:#e3e8f3; cursor:pointer;}
+a.menu:active, a.active, a.active:hover {background-color:#364a83; cursor:pointer; color:#ffffff;}
+a.menu span {position:absolute; right:12px; top:10px; background-image:url(http://www.closingcircle.com/Content/img/menu_fleche.png); width:7px; height:11px;}
+a.menu:active span, a.active span {background-image:url(http://www.closingcircle.com/Content/img/menu_fleche_over.png);}
+
+.blue_title {background-color:#486aae; width:100%; margin:1px 0 0 0; padding:0;}
+.blue_title p {color:White; font-size: 13px; font-weight:bold; padding:7px 2px 9px 10px; margin:0; text-transform:uppercase;}
+
+/*popin*/
+#modalbox {overflow:hidden; height:0; padding:10px 10px 10px 10px; position:absolute;}
+.ui-dialog .ui-dialog-content {position:relative !important;}
+.popin {padding:0; margin:0;}
+.popin label {color:#46465d; font-size:13px; display:block; height:90px; margin:5px 0px 10px 0px; text-align:left;
+			border-bottom:1px solid #dedfe2; padding:0; font-weight:normal; font-style:normal;}
+.popin span.gras {font-weight:bold; font-style:normal;}
+
+.popin p.bottom, .send_invite p.bottom {margin:0; padding:0 0 3px 0; height:33px; width:100%;}
+a.cancel_button, a.valid_button {color:#5f6572; font-size:13px !important; font-weight:bold; float:right; height:21px; text-align:center; display:block; 
+								margin:0px 0 0px 0; border:0; background-repeat:no-repeat; text-decoration:none; 
+								background-color:transparent; background-position:center center; font-family:Tahoma, Arial, Verdana;}
+a.cancel_button {margin-right:6px; background-image:url(http://www.closingcircle.com/Content/img/buttons/mailsend_cancel.png); width:101px; padding:7px 0 3px 0; margin-top:1px; margin-bottom:1px;}
+a.valid_button {margin-right:0px; background-image:url(http://www.closingcircle.com/Content/img/buttons/valid_signout.png); width:119px; padding:8px 0 4px 0; padding-right:30px; color:#ffffff !important;}
+
+/*quicksearch*/
+.quicksearch {margin:0; width:692px; float:left; text-align:right; padding:0 0 0 0; position:relative; z-index:999; overflow:visible;}
+.quicksearch select, .quicksearch input {margin:0; padding:4px 2px 4px 2px; height:26px; float:right; border:0; font-size:12px;}
+.quicksearch select {background-image:url(http://www.closingcircle.com/Content/img/buttons/quicksearch_select.png); background-color:transparent; width:93px; color:#5f6572;}
+.quicksearch input[type="text"] {background-image:url(http://www.closingcircle.com/Content/img/buttons/quicksearch_bg.png); width:300px; height:18px; line-height:18px; color:#283a6c;}
+.quicksearch input[type="submit"] {background-image:url(http://www.closingcircle.com/Content/img/buttons/quicksearch_ok.png); width:25px; cursor:pointer;}
+
+.quicksearch .ui-dropdownchecklist {position:relative; float:right;}
+.quicksearch .ui-dropdownchecklist .ui-icon {display:none;}
+.quicksearch .ui-dropdownchecklist-selector {position:relative; background-image:url(http://www.closingcircle.com/Content/img/buttons/quicksearch_select.png); 
+	background-color:transparent; background-repeat:no-repeat; width:93px; height:26px; padding:0; border:0;}
+.quicksearch .ui-dropdownchecklist-item {width:91px; background:white none !important; background-color:White;
+	position:relative; height:24px; overflow:hidden;}
+.quicksearch .ui-widget-content .ui-state-default {border:1px solid #cbd5eb !important; border-top-style:none !important;}
+.quicksearch .ui-dropdownchecklist-dropcontainer {height:auto; width:93px; overflow:hidden !important; border-color:#cbcbcd; border-style:none;}
+.quicksearch .ui-dropdownchecklist-text {font-size:12px; color:#5f6572; font-family:Tahoma, Geneva, Arial; font-weight:normal; text-align:left;}
+.quicksearch .ui-dropdownchecklist-selector .ui-dropdownchecklist-text {position:absolute; top:6px; left:6px;}
+.quicksearch .ui-dropdownchecklist-item input {position:absolute; left:-30px;}
+.quicksearch .ui-dropdownchecklist-item label {position:absolute; top:-2px; left:-2px; display:block; padding:2px 2px 4px 2px; border:4px solid white; width:83px;}
+.quicksearch .ui-dropdownchecklist-item:hover {border:#aed0ea 1px solid;}
+.quicksearch .ui-dropdownchecklist-item:hover label {background-color:#E3E8F3;}
+
+/*compteur*/
+span.redcount {background-image:url(http://www.closingcircle.com/Content/img/redcount_left.png); background-repeat:no-repeat; background-position:left center; 
+	background-color:transparent !important; display:inline-block; height:14px; padding:0 0 0 7px; width:auto !important; position:absolute;}
+span.redcount label {background-image:url(http://www.closingcircle.com/Content/img/redcount_right.png); background-position:right center; padding:2px 8px 2px 0; font-family:Verdana, Arial; 
+	display:inline-block; position:relative; width:auto; color:white; left:0px; top:0; margin:0; height:10px; line-height:10px;}
+
+/* DFP Google */
+div.pub { margin-top: 25px; margin-bottom: -9px; text-align: center; }
+
+div.bloc_back 
+{
+	margin-top: 9px;
+	margin-bottom: -9px;
+}
+div.bloc_back a.page_back {
+	background-image: url("http://www.closingcircle.com/Content/img/buttons/page_back_large.png");
+	width: 145px;
+	padding: 1px 0 0 25px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #5F6572;
+	display: inline-block;
+	float: none;
+	font-size: 11px;
+	height: 16px;
+	text-decoration: none;
+}
+
+div.sposnorsContrainer { min-height:500px; }
+
+span.opening { background-color:#1c294d; display:block; float:left; text-transform:uppercase; text-decoration:none; font-size:13px; height:13px; padding:9px 14px 11px 14px; margin:0; }
+
+.sponsor img { width:146px; vertical-align:top; border:1px solid #e5e6e6;}
+.sponsor > div { display:inline-block; width:550px; padding-bottom:15px; text-align:justify; margin-left:20px; vertical-align:top;}

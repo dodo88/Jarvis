@@ -19,6 +19,7 @@ class Admin_model extends CI_Model {
          // person has account with us
          return $q->row();
       }
+	  
       return false;
    }
 }

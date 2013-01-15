@@ -29,14 +29,13 @@ class Home_user extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->library('session');
 		$this->load->helper('cookie');
-		$this->form_validation->set_rules('username', 'UserName', 'valid_email|required');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[4]');
+		$this->form_validation->set_rules('username', "user's email", 'valid_email|required');
+		$this->form_validation->set_rules('password', "password", 'required|min_length[4]');
+		$this->load->model('admin_model');
 		
 		if ( $this->form_validation->run() !== false ) 
 		{
-			// then validation passed. Get from db
-			$this->load->model('admin_model');
-			$useremail = $this->input->post('email_address');
+			$useremail = $this->input->post('username');
 			$password = $this->input->post('password');
 			
 			$res = $this
@@ -51,7 +50,6 @@ class Home_user extends CI_Controller {
 				$this->session->set_userdata('username', $useremail);
 				$this->session->set_userdata('password', $password);
 				$this->session->set_userdata('authenticated', true);
-
 				
 				if ($this->input->post('rememberme') == 'rememberme')
 				{
@@ -60,24 +58,29 @@ class Home_user extends CI_Controller {
 					$_COOKIE['password'] = $password;
 				};
 				
-				$this->load->view('home_user');
+				$data = array(
+					'useremail' => $useremail);				
+				$this->load->view('home_user', $data);
 			} else {
-				$this->load->view('login');
+				$data = array(
+					'authenticated' => 'failed');				
+				$this->load->view('login', $data);
 			}
 			
 		}
-		else if( $this->session->userdata('authenticated'))
+		else if($this->session->userdata('authenticated'))
 		{
-			$this->load->view('home_user');		
+			$useremail = $this->session->userdata('username');
+			$data = array(
+					'useremail' => $useremail);				
+			$this->load->view('home_user', $data);
 		}
-		else if ($_COOKIE['rememberme'] = 'rememberme')
-		{
-			if (isset($_COOKIE['username']) && $_COOKIE['username'] != ''
+		else if (isset($_COOKIE['rememberme']) && $_COOKIE['rememberme'] = 'rememberme'
+				&& isset($_COOKIE['username']) && $_COOKIE['username'] != ''
 				&& isset($_COOKIE['password']) && $_COOKIE['password'] != '')
-			{
-				$useremail = $_COOKIE['username'];
-				$password = $_COOKIE['password'];
-			}
+		{	
+			$useremail = $_COOKIE['username'];
+			$password = $_COOKIE['password'];
 			
 			$res = $this
 				->admin_model
@@ -92,20 +95,28 @@ class Home_user extends CI_Controller {
 				$this->session->set_userdata('password', $password);
 				$this->session->set_userdata('authenticated', true);
 				
-				$this->load->view('home_user');
+				$data = array(
+					'useremail' => $useremail);				
+				$this->load->view('home_user', $data);
 			} else {
-				$this->load->view('login');
+				$data = array(
+					'authenticated' => 'failed');				
+				$this->load->view('login', $data);
 			}
 		}
 		else
 		{
-			$this->load->view('login');
+			$data = array(
+					'authenticated' => 'failed');				
+			$this->load->view('login', $data);
 		}
 	}
 	
 	public function logout()
 	{
 		$this->load->library('session');
+		$this->load->helper('url');
+		
 		$this->session->unset_userdata('authenticated');
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('password');
@@ -116,7 +127,8 @@ class Home_user extends CI_Controller {
 		
 		session_destroy();
 		
-		$this->load->view('welcome_message');
+		// $this->load->view('welcome_message_1');
+		redirect('', 'refresh');
 	}
 }
 

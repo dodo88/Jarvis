@@ -19,9 +19,8 @@
 					<img src="<?php echo base_url(); ?>style/ci.jpg" alt="">
 				</a>
 				<div id="login" style="float:right;">
-					Hi, <a href="#"><?php if (isset($useremail)) echo $useremail; ?></a>!
-					<a class="membership_head" href="/jarvis/index.php/home_user/logout">Log Out</a>
-					<a class="membership_head" href="#">Edit Profile</a>
+					<a class="membership_head" href="#">Sign up</a>
+					<a class="membership_head" href="/jarvis/index.php/welcome/login">Login</a>
 				</div>
 			</div>
 		</div>
@@ -29,14 +28,8 @@
 			<div class="middle">
 				<div class="left"></div>
 				<a class="menu_home" href="/jarvis">Home</a>
-				<a class="menu_apply" href="#">Approve Projects</a>
-				<a class="menu_apply" href="#">Sell Projects</a>
-				<a class="menu_apply" href="#">Manage Projects</a>
-				<a class="menu_apply" href="#">Pro Profile</a>
-				<a class="menu_apply" href="#">Project List</a>
-				<a class="menu_apply" href="#">Pro List</a>
-				<a class="menu_apply" href="#">Selling Tools</a>
-				<a class="menu_apply" href="#">Reports</a>
+				<a class="menu_apply" href="#">Contact us</a>
+				<a class="menu_contact" href="#">About us</a>
 				<div class="right"></div>
 			</div></div>
 		<div id="header">
