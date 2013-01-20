@@ -37,6 +37,53 @@ function updateProjectForm() {
 };
 
 $(document).ready(function() {
+	my_dialog = $('<div id="contenu"><p> Are you sure that you want to validate this project?</div>').dialog({
+
+		draggable: false,
+		width: '800px',
+		modal: true,
+		position: ["center", "center"],
+		autoOpen: false,
+		resizable: false,
+		buttons: {
+        Ok: function() {
+				$( this ).dialog( "close" );
+				$("#edit_project").attr('disabled', 'disabled');
+				$("#valid_project").attr('disabled', 'disabled');
+				var id =  $.fn.yiiGridView.getSelection('project-grid');
+				datap = "id="+id;
+				var aUrl = 'index.php?r=approveProject/validateProject';
+				$.ajax({
+						url: aUrl,
+						data: datap,
+						type:'POST',
+						success: function(data){
+							// what i do on success?
+							$("#project_id").val("");
+							$("#date_submit").val("");
+							$("#what_project").val("");
+							$("#where_project").val("");
+							$("#when_project").val("");
+							$("#client_name").val("");
+							$("#client_phone").val("");
+							$("#client_email").val("");
+							$("#admin_note").val("");
+							$.fn.yiiGridView.update('project-grid', {data: $(this).serialize() });
+				},
+			error: function(){
+                    // what i do on error=?
+					alert(" We have an error ");
+                }});
+					
+			},
+		Cancel: function() {
+          $( this ).dialog( "close" );
+		  
+			}
+		},
+	});
+	
+
 $('#edit_project').bind('click', function() {
 	$("#save_edit_project").show("slow");
 	$("#cancel_edit_project").show("slow");
@@ -53,6 +100,8 @@ $('#edit_project').bind('click', function() {
 });
 
 $('#valid_project').bind('click', function() {
+	my_dialog.dialog("open");
+	/*
 	$("#edit_project").attr('disabled', 'disabled');
 	$("#valid_project").attr('disabled', 'disabled');
 	var id =  $.fn.yiiGridView.getSelection('project-grid');
@@ -79,6 +128,7 @@ $('#valid_project').bind('click', function() {
                     // what i do on error=?
 					alert(" We have an error ");
                 }});
+	*/
 });
 
 $('#cancel_edit_project').bind('click', function() {
