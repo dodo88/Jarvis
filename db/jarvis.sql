@@ -75,3 +75,28 @@ INSERT INTO `users` (`id`, `last_name`, `first_name`, `email_address`, `password
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE IF NOT EXISTS `projects` (
+  `project_id` int(11) NOT NULL AUTO_INCREMENT,
+  `what_project` varchar(255) DEFAULT NULL,
+  `where_project` varchar(255) DEFAULT NULL,
+  `when_project` varchar(255) DEFAULT NULL,
+  `admin_note` varchar(255) DEFAULT NULL,
+  `client_name` varchar(80) DEFAULT NULL,
+  `client_phone` varchar(80) DEFAULT NULL,
+  `client_email` varchar(80) DEFAULT NULL,
+  `date_submit` date DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`project_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `projects`
+--
+
+INSERT INTO `projects` (`project_id`, `what_project`, `where_project`, `when_project`, `admin_note`, `client_name`, `client_phone`, `client_email`, `date_submit`, `status`) VALUES
+(1, 'gggggggggggggg', 'dfgfdg', 'fdgfdg', 'dfgdfg', 'dfgfdgfd', '890887755', 'zerezrezr@dsfds.com', '2013-01-16', 1),
+(2, 'yyyyyyyyyy', 'qqqqqqq', 'gggggkk', 'dgfd', 'jbkbkj', '55776544', 'dsfds@gsf.com', '2013-01-16', 2),
+(3, 'uuuuuuuuuuuuu', 'ghjfgh', 'dsfgdsf', 'sdgsd', 'dsfdsf', '445624444', 'dsfsdf@gdsfsdf.com', '2013-01-11', 1),
+(4, 'sfsdf', 'sdfsdf', 'sdfsdf', 'cvbcvb', 'cvbcvb', '22222222', 'dsfsdf@gdsfsdf.com', '2013-01-08', 1);
+
