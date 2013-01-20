@@ -33,7 +33,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Approve Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Approve Projects', 'url'=>array('approveProject/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Sell Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Manage Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Pro Profile', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
