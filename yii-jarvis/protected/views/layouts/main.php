@@ -30,8 +30,16 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Approve Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Sell Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Manage Projects', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Pro Profile', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Project List', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Pro List', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Setting Tools', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Reports', 'url'=>array('#'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Contact', 'url'=>array('/site/contact'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
