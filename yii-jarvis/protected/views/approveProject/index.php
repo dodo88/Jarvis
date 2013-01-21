@@ -1,3 +1,7 @@
+<div id="list_project">
+<div id="label_list_project">
+	<p>List of projects to be approved </p>
+</div>
 <?php
 /* @var $this SiteController */
 
@@ -32,6 +36,7 @@ $this->widget('zii.widgets.CListView', array(
     ));
 */	
 ?>
+</div>
 <?php
 
 if(isset($_POST['data']))
@@ -41,13 +46,13 @@ else
 ?>
 <div class="project">
  <div class="edit_project">
-	<input type="button"  id="edit_project"  value="Edit" disabled /> 
-	<input type="button"  id="cancel_edit_project"  value="Cancel" style="display:none" />
-	<input type="button"  id="save_edit_project"  value="Save" style="display:none"  />
+	<input type="button"  id="edit_project"  value="Edit" disabled class="button_edit_project"  /> 
+	<input type="button"  id="cancel_edit_project"  value="Cancel" style="display:none" class="button_edit_project" />
+	<input type="button"  id="save_edit_project"  value="Save" style="display:none" class="button_edit_project"  />
 </div>
 <?php $this->renderPartial('_form', array('data'=>$data)); ?>
  <div class="valid_project">
-	<input type="button"  id="valid_project"  value="Validate" disabled /> 
+	<input type="button"  id="valid_project"  value="Validate" disabled class="button_valid_project"/> 
 </div>
 
 </div>

@@ -1,3 +1,13 @@
+function resetCursor(txtElement) { 
+    if (txtElement.setSelectionRange) { 
+        txtElement.focus(); 
+        txtElement.setSelectionRange(0, 0); 
+    } else if (txtElement.createTextRange) { 
+        var range = txtElement.createTextRange();  
+        range.moveStart('character', 0); 
+        range.select(); 
+    } 
+};
 function updateProjectForm() {
 	if($.fn.yiiGridView.getSelection('project-grid') =="")
 	{
@@ -37,6 +47,8 @@ function updateProjectForm() {
 };
 
 $(document).ready(function() {
+	resetCursor($("#what_project"));
+	resetCursor($("#admin_note"));
 	my_dialog = $('<div id="contenu"><p> Are you sure that you want to validate this project?</div>').dialog({
 
 		draggable: false,

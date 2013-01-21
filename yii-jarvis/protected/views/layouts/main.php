@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/Project.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui-1.10.0.custom.css">
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.9.0.min.js"></script>	
 	<?php Yii::app()->clientScript->scriptMap=array('jquery.ui.js'=>Yii::app()->request->baseUrl.'/js/jquery-ui-1.10.0.custom.js',) ;													
 		Yii::app()->clientScript->registerCoreScript('jquery.ui');	?>	
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/grid-project.js"></script>
