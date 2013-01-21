@@ -31,7 +31,9 @@ class UserIdentity extends CUserIdentity
 		// elseif($users[$this->username]!==$this->password)
 		//	$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else {
-			$this->jarvisUserId = $search_result->getData()[0]->getAttributes()['id'];
+			$data = $search_result->getData();
+			$attributes = $data[0]->getAttributes();
+			$this->jarvisUserId = $attributes['id'];
 			$this->errorCode=self::ERROR_NONE;
 		}
 			
