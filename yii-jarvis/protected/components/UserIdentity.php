@@ -7,6 +7,7 @@
  */
 class UserIdentity extends CUserIdentity
 {
+	public $jarvisUserId = 0;
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password
@@ -24,14 +25,16 @@ class UserIdentity extends CUserIdentity
 		$search_result = $jarvisUser->search();
 		$count = $search_result->getItemCount();
 		
-		if($count != 1)
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		
+		if($count != 1) {
+			$this->errorCode=self::ERROR_USERNAME_INVALID;			
+		}
 		// elseif($users[$this->username]!==$this->password)
 		//	$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		
-		else
+		else {
+			$this->jarvisUserId = $search_result->getData()[0]->getAttributes()['id'];
 			$this->errorCode=self::ERROR_NONE;
+		}
+			
 		return !$this->errorCode;
 	}
 }

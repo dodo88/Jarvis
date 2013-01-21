@@ -100,13 +100,19 @@ class JarvisUserController extends Controller
 		if(isset($_POST['JarvisUser']))
 		{
 			$model->attributes=$_POST['JarvisUser'];
+			
 			if($model->save())
 				$this->redirect(array('view', 'id'=>$model->id));
 		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		
+		if ($id == Yii::app()->user->getJarvisUserId())
+		{
+			$this->render('update',array(
+				'model'=>$model,
+			));
+		} else {
+			$this->redirect(array('update', 'id'=>Yii::app()->user->getJarvisUserId()));
+		}
 	}
 
 	/**

@@ -70,15 +70,15 @@ class Projects extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'project_id' => 'Project',
-			'what_project' => 'What Project',
-			'where_project' => 'Where Project',
-			'when_project' => 'When Project',
+			'project_id' => 'Project ID #',
+			'what_project' => 'What',
+			'where_project' => 'Where',
+			'when_project' => 'When',
 			'admin_note' => 'Admin Note',
 			'client_name' => 'Client Name',
 			'client_phone' => 'Client Phone',
 			'client_email' => 'Client Email',
-			'date_submit' => 'Date Submit',
+			'date_submit' => 'Date Submitted',
 			'status' => 'Status',
 		);
 	}

@@ -15,11 +15,15 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+	<?php if ($model->isNewRecord) { ?>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>40)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
+	
+	<?php } ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'first_name'); ?>
@@ -41,7 +45,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'address',array('rows'=>6, 'cols'=>47)); ?>
 		<?php echo $form->error($model,'address'); ?>
 	</div>
 
@@ -52,7 +56,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Register' : 'Save Profile'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

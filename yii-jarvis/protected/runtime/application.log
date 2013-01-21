@@ -530,3 +530,190 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/yii-jarvis/index.php?r=jarvisUser/update
 ---
+2013/01/21 11:17:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\wamp\www\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(JarvisUser))
+#7 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('JarvisUser')
+#8 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 C:\wamp\www\yii-jarvis\protected\components\UserIdentity.php(20): CActiveRecord->__construct()
+#10 C:\wamp\www\yii-jarvis\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#11 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#12 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#13 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#14 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(95): CModel->validate()
+#15 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#16 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#21 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\wamp\www\yii-jarvis\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yii-jarvis/index.php?r=site/login
+HTTP_REFERER=http://127.0.0.1/yii-jarvis/index.php?r=site/login
+---
+2013/01/21 12:31:15 [error] [php] Use of undefined constant aaa - assumed 'aaa' (C:\wamp\www\yii-jarvis\protected\views\layouts\main.php:43)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#1 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(206): CContentDecorator->run()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(300): SiteController->endWidget()
+#5 C:\wamp\www\yii-jarvis\protected\views\layouts\column1.php(6): SiteController->endContent()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\yii\framework\web\CController.php(784): SiteController->renderFile()
+#9 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(32): SiteController->render()
+#10 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp\www\yii-jarvis\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-jarvis/index.php?r=site/index
+in C:\wamp\www\yii-jarvis\protected\views\layouts\main.php (43)
+in C:\wamp\www\yii-jarvis\protected\views\layouts\column1.php (6)
+in C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php (32)
+2013/01/21 13:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\yii-jarvis\protected\controllers\JarvisUserController.php:163
+Stack trace:
+#0 C:\wamp\www\yii-jarvis\protected\controllers\JarvisUserController.php(95): JarvisUserController->loadModel('2')
+#1 [internal function]: JarvisUserController->actionUpdate('2')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(JarvisUserController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(JarvisUserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('jarvisUser/upda...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\yii-jarvis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii-jarvis/index.php?r=jarvisUser/update&id=2
+---
+2013/01/21 14:11:51 [error] [php] Trying to get property of non-object (C:\wamp\www\yii-jarvis\protected\components\UserIdentity.php:29)
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#1 C:\wamp\www\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(95): LoginForm->validate()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\wamp\www\yii-jarvis\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-jarvis/index.php?r=site/login
+in C:\wamp\www\yii-jarvis\protected\components\UserIdentity.php (29)
+in C:\wamp\www\yii-jarvis\protected\models\LoginForm.php (53)
+in C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php (95)
+2013/01/21 14:12:22 [error] [exception.CException] exception 'CException' with message 'CActiveDataProvider and its behaviors do not have a method or closure named "getAttributes".' in C:\wamp\www\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\wamp\www\yii-jarvis\protected\components\UserIdentity.php(29): CComponent->__call('getAttributes', Array)
+#1 C:\wamp\www\yii-jarvis\protected\components\UserIdentity.php(29): CActiveDataProvider->getAttributes()
+#2 C:\wamp\www\yii-jarvis\protected\models\LoginForm.php(53): UserIdentity->authenticate()
+#3 C:\wamp\www\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\www\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(95): CModel->validate()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp\www\yii-jarvis\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii-jarvis/index.php?r=site/login
+HTTP_REFERER=http://127.0.0.1/yii-jarvis/index.php?r=site/login
+---
+2013/01/21 14:16:04 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.jarvisUserId" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\base\CModule.php(105): CComponent->__get('jarvisUserId')
+#1 C:\wamp\www\yii-jarvis\protected\views\layouts\main.php(45): CModule->__get('jarvisUserId')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\yii...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#4 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#5 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#9 C:\wamp\www\yii-jarvis\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\yii...')
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#13 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(100): CController->render('login', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\yii-jarvis\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii-jarvis/index.php?r=site/login
+HTTP_REFERER=http://127.0.0.1/yii-jarvis/index.php?r=site/login
+---
+2013/01/21 14:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\yii-jarvis\protected\controllers\JarvisUserController.php:163
+Stack trace:
+#0 C:\wamp\www\yii-jarvis\protected\controllers\JarvisUserController.php(95): JarvisUserController->loadModel('0')
+#1 [internal function]: JarvisUserController->actionUpdate('0')
+#2 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(JarvisUserController), Array)
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(JarvisUserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('jarvisUser/upda...')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp\www\yii-jarvis\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii-jarvis/index.php?r=jarvisUser/update&id=0
+HTTP_REFERER=http://127.0.0.1/yii-jarvis/index.php?r=site/
+---
+2013/01/21 14:24:48 [error] [php] Undefined variable: jarvisUserId (C:\wamp\www\yii\framework\web\auth\CWebUser.php:64)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 C:\wamp\www\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\wamp\www\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 C:\wamp\www\yii-jarvis\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(784): SiteController->renderFile()
+#10 C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php(32): SiteController->render()
+#11 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\wamp\www\yii-jarvis\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-jarvis/index.php?r=site/
+in C:\wamp\www\yii-jarvis\protected\views\layouts\main.php (45)
+in C:\wamp\www\yii-jarvis\protected\views\layouts\column1.php (6)
+in C:\wamp\www\yii-jarvis\protected\controllers\SiteController.php (32)

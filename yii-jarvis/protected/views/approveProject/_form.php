@@ -12,6 +12,9 @@
 	<label>Date Submited :</label> 
 	<input type="text"  id="date_submit" disabled <?php if($data!=NULL){?> value="<?php echo $data->date_submit;}?>" /> 
 	</div >
+	
+	<hr>
+	
 	<div class="form_row_area">
 	<label>What :</label> 
 	<textarea  id="what_project" disabled ><?php if($data!=NULL){echo $data->what_project;}?></textarea>
@@ -24,6 +27,9 @@
 	<label>When :</label> 
 	<input type="text"  id="when_project" disabled <?php if($data!=NULL){?> value="<?php echo $data->when_project;}?>" /> 
 	</div>
+	
+	<hr>
+	
 	<div class="form_row">
 	<label>Client Name :</label> 
 	<input type="text"  id="client_name" disabled <?php if($data!=NULL){?> value="<?php echo $data->client_name;}?>" /> 
@@ -36,6 +42,9 @@
 	<label>Email :</label> 
 	<input type="text"  id="client_email" disabled <?php if($data!=NULL){?> value="<?php echo $data->client_email;}?>" /> 
 	</div>
+	
+	<hr>
+	
 	<div class="form_row_area">
 	<label>Admin Notes :</label> 
 	<textarea  id="admin_note" disabled><?php if($data!=NULL){echo $data->admin_note;}?></textarea>

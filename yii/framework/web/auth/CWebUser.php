@@ -57,6 +57,20 @@
  */
 class CWebUser extends CApplicationComponent implements IWebUser
 {
+	// jarvis user id
+	private $jarvisUserId;
+	
+	public function getJarvisUserId() {
+		return $this->getState('__jarvisUserId');
+		// return $this->jarvisUserId;
+	}
+	
+	public function setJarvisUserId($newId) {
+		// echo "aaa";
+		// $this->jarvisUserId = $newId;
+		$this->setState('__jarvisUserId', $newId);
+	}
+	
 	const FLASH_KEY_PREFIX='Yii.CWebUser.flash.';
 	const FLASH_COUNTERS='Yii.CWebUser.flashcounters';
 	const STATES_VAR='__states';

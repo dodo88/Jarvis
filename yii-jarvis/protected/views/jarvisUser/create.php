@@ -3,8 +3,8 @@
 /* @var $model JarvisUser */
 
 $this->breadcrumbs=array(
-	'Jarvis Users'=>array('index'),
-	'Create',
+	// 'Jarvis Users'=>array('index'),
+	'Sign up',
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create JarvisUser</h1>
+<h1>Register a new Jarvis account</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
