@@ -101,6 +101,8 @@ $('#edit_project').bind('click', function() {
 	$("#cancel_edit_project").show("slow");
 	$("#edit_project").hide("slow");
 	$("#valid_project").hide("slow");
+	$("#project_id").css('background','#5C9CCC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x');
+	$("#date_submit").css('background','#5C9CCC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x');
 	$("#what_project").removeAttr("disabled");
 	$("#where_project").removeAttr("disabled");
 	$("#when_project").removeAttr("disabled");
@@ -190,6 +192,8 @@ $('#save_edit_project').bind('click', function() {
 					$("#client_phone").attr('disabled', 'disabled');
 					$("#client_email").attr('disabled', 'disabled');
 					$("#admin_note").attr('disabled', 'disabled');
+					$("#project_id").css('background','#DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x');
+					$("#date_submit").css('background','#DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x');
 					$.fn.yiiGridView.update('project-grid', {data: $(this).serialize() })
 				},
 			error: function(){
