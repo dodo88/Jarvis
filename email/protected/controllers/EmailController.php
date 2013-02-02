@@ -42,10 +42,12 @@ class EmailController extends Controller
 		$model->setAttribute('website',$_POST['website']);
 		$model->setAttribute('facebook',$_POST['facebook']);
 		$model->setAttribute('survey',$_POST['survey']);
+		/*
 		if(isset($_FILES['logo_template']))
 { 		{
 			$taille = filesize($_FILES['logo_template']);
 		}
+		*/
 		$model->save();
 		$this->renderPartial('_form',array('data' => $model,false));
 	}
