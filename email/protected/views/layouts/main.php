@@ -32,7 +32,7 @@
 		<div id="logo">
 			<div class="middle">
 				<a class="return" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/images/ci.jpg" alt="">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/images/CCC_Logo.jpg" alt="">
 				</a>
 				<div id="login" style="float:right;">
 					<?php if (Yii::app()->user->isGuest) { ?>
@@ -54,7 +54,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Send Email', 'url'=>array('approveProject/index'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Send Email', 'url'=>array('sendEmail/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Email Template Management', 'url'=>array('email/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Question Survey Management', 'url'=>array('question/index'), 'visible'=>!Yii::app()->user->isGuest),
 				

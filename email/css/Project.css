@@ -174,7 +174,7 @@
 
 }
 
-input[type=text], input[type=password], input[type=file] {
+input[type=text], input[type=password], input[type=file] ,input[type=date]{
     background: #DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
     color: #2E6E9E;
     border: 1px solid #C5DBEC;
@@ -238,4 +238,20 @@ input[type=submit] {
 	
 	text-shadow:0px 1px 0px #528ecc;
 	width:100px;
+}
+.form_send_email{
+	border:solid;
+	border-width:1px;
+	padding:10px 10px 10px 10px;
+	margin:80px 0px 0px 260px;
+	width:350px;
+	height:300px;
+
+}
+.form_row_radio{width:350px;height:35px;}
+.sexe{width:100px;height:35px; margin-left:120px;}
+.type_client{width:220px;height:35px; margin-left:120px;}
+#send_email{
+	margin-top:40px;
+	margin-left:120px;
 }
