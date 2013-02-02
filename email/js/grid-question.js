@@ -322,6 +322,7 @@ $('#radio2').bind('click', function() {
                 }});
 	}
 });
+/*
 $('#save_template').bind('click', function() {
 	if (($('#radio2').attr("checked") != "undefined" && $('#radio2').attr("checked") == "checked") || ($('#radio1').attr("checked") != "undefined" && $('#radio1').attr("checked") == "checked"))
 	{
@@ -340,5 +341,6 @@ $('#save_template').bind('click', function() {
                 }});
 	}
 });
+*/
 
 });
