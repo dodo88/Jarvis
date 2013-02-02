@@ -281,4 +281,64 @@ $('#save_edit_question').bind('click', function() {
 					
 });
 
+$('#radio1').bind('click', function() {
+	if ($('#radio1').attr("checked") != "undefined" && $('#radio1').attr("checked") == "checked")
+	{
+		$("#save_template").removeAttr("disabled");
+		var datap = "id="+1;	
+		var aUrl = 'index.php?r=email/getTemplate';
+		$.ajax({
+			url: aUrl,
+			data: datap,
+			type:'POST',
+			success: function(data){
+					// what i do on success?
+					$(".form_template").replaceWith(data);
+				},
+			error: function(){
+                    // what i do on error=?
+					alert(" We have an error ");
+                }});
+	}
+});
+
+$('#radio2').bind('click', function() {
+	if ($('#radio2').attr("checked") != "undefined" && $('#radio2').attr("checked") == "checked")
+	{
+		$("#save_template").removeAttr("disabled");
+		var datap = "id="+2;	
+		var aUrl = 'index.php?r=email/getTemplate';
+		$.ajax({
+			url: aUrl,
+			data: datap,
+			type:'POST',
+			success: function(data){
+					// what i do on success?
+					$(".form_template").replaceWith(data);
+				},
+			error: function(){
+                    // what i do on error=?
+					alert(" We have an error ");
+                }});
+	}
+});
+$('#save_template').bind('click', function() {
+	if (($('#radio2').attr("checked") != "undefined" && $('#radio2').attr("checked") == "checked") || ($('#radio1').attr("checked") != "undefined" && $('#radio1').attr("checked") == "checked"))
+	{
+		var aUrl = 'index.php?r=email/saveTemplate';
+		$.ajax({
+			url: aUrl,
+			data: $("#email_template").serialize(),
+			type:'POST',
+			success: function(data){
+					// what i do on success?
+					$(".form_template").replaceWith(data);
+				},
+			error: function(){
+                    // what i do on error=?
+					alert(" We have an error ");
+                }});
+	}
+});
+
 });

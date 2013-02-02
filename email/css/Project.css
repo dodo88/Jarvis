@@ -12,8 +12,10 @@
 	width:350px;
 	height:300px;
 }
-
+#template_details{width:900px; height:400px;}
 .question  {width:350px; height:700px; margin-left: 520px; margin-top:5px;}
+.template2  {width:450px; height:700px; margin-left: 0px; margin-top:5px; float:right;}
+.template1 {width:450px; float:left;}
 .edit_question {width:350px; height:50px;}
 .valid_question 
 {
@@ -172,7 +174,7 @@
 
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=file] {
     background: #DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
     color: #2E6E9E;
     border: 1px solid #C5DBEC;
@@ -182,6 +184,17 @@ input[type=text], input[type=password] {
 	max-width:220px;
 }
 
+input[type=file] {
+    background: #DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+    color: #2E6E9E;
+    border: 1px solid #C5DBEC;
+    padding: 5px;
+    border-radius: 5px;
+	
+	width:250px;
+	max-width:250px;
+	min-width:250px;
+}
 textarea {
     background: #DFEFFC url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/redmond/images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
     color: #2E6E9E;
