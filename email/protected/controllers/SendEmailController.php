@@ -25,7 +25,7 @@ class SendEmailController extends Controller
 		);
 	}
 	
-	private function sendEmail() {
+	private function sendEmail($from, $to, $subject, $content) {
 		$mail = new PHPMailer();
 		 
 		$mail->IsSMTP(); 
@@ -37,12 +37,13 @@ class SendEmailController extends Controller
 		$mail->Username = "sonhuytran@gmail.com"; // SMTP username
 		$mail->Password = "lAvITAebELLA1177@"; // SMTP password
 		 
-		$mail->From = "sonhuytran@gmail.com";
+		$mail->From = $from;
 		$mail->FromName = "info@coastalcatclinicpacifica.com";
-		$mail->AddAddress("sonhuytran@gmail.com", "Son-Huy");
+		$mail->AddAddress($to);
 		
-		$mail->Subject = "abc";
-		$mail->Body = "xyz";
+		$mail->IsHTML(true);
+		$mail->Subject = $subject;
+		$mail->Body = $content;
 		
 		return $mail->Send();
 	}
@@ -69,7 +70,7 @@ class SendEmailController extends Controller
 			$email_content .= "<a href='http://sonhuytran.info/email/index.php?r=survey/index'><a/>";
 			$email_content .= "<a href='#'>Contact Infos<a/>";
 			
-			$this->sendEmail();
+			$this->sendEmail("sonhuytran@gmail", $client_email, "Thank you from Coastal Cat Clinic", $email_content);
 			
 			$email_sent = "ok";
 		}
