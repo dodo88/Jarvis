@@ -54,10 +54,11 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
+				array('label'=>'Do Survey', 'url'=>array('survey/index'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Send Email', 'url'=>array('sendEmail/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Email Template Management', 'url'=>array('email/index'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Question Survey Management', 'url'=>array('question/index'), 'visible'=>!Yii::app()->user->isGuest),
-				
+				array('label'=>'Report Management', 'url'=>array('report/admin'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

@@ -45,7 +45,7 @@ class EmailController extends Controller
 		$model=Email::model()->findByPk($_POST['id']);
 		$model->setAttribute('add_from',$_POST['add_from']);
 		$model->setAttribute('subject',$_POST['subject']);
-		$model->setAttribute('email_content',$_POST['email_content']);
+		$model->setAttribute('content',$_POST['email_content']);
 		$model->setAttribute('contact_info',$_POST['contact_info']);
 		$model->setAttribute('website',$_POST['website']);
 		$model->setAttribute('facebook',$_POST['facebook']);
