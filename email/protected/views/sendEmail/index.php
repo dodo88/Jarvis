@@ -3,7 +3,7 @@
 		<?php
 		
 		if (isset($email_sent) && $email_sent == "ok") {
-			echo "<p>Your email has been sent</p>";
+			echo "<p>Your email has been sent</p>" . $email_content;
 		} else {
 			echo "<p>Send Email</p>";
 		}

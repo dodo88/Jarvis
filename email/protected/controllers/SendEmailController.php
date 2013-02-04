@@ -51,24 +51,25 @@ class SendEmailController extends Controller
 	public function actionIndex()
 	{
 		$email_sent = "notok";
+		$email_content = "";
 		
 		if (isset($_POST["send_email"])) {
-			$sexe =  $_POST["sexe"];
+			$type_client = $_POST["id"];
+			$sexe = $_POST["sexe"];
 			$client_name = $_POST["client_name"];
 			$patient_name = $_POST["patient_name"];
 			$date = $_POST["date"];
 			$client_email = $_POST["client_email"];
 			
-			$email_content = "Dear $client_name<br/><br/>";
-			$email_content .= "We are so delighted that you trusted our hospital and brought your precious cat, $patient_name, to the Coastal Cat Clinic on $date. We pride ourselves on offering our clients responsive, competent and excellent service. Our clients are the most important part of our clinic and we work tirelessly to ensure your complete satisfaction.<br/>";
-			$email_content .= "In order to improve our services constantly we would appreciate if you take our online survey. It would take about three minutes of your precious time but it would help us hugely to improve the quality of our services.<br/>";
-			$email_content .= "Thank you again for being our valued client and we look forward to meeting again.<br/><br/>";
-			$email_content .= "Coastal Cat Clinic";
+			$template = Email::model()->findByPk($type_client);
 			
-			$email_content .= "<a href='www.coastalcatclinicpacifica.com'>Coastal Cat Clinic<a/>";
-			$email_content .= "<a href='www.facebook.com/coastalcat'>Coastal Cat Clinic's Facebook<a/>";
-			$email_content .= "<a href='http://sonhuytran.info/email/index.php?r=survey/index'><a/>";
-			$email_content .= "<a href='#'>Contact Infos<a/>";
+			$email_content = '<html><img src="data:image/jpg;base64,' . base64_encode( $template->logo ) . '" />';
+			$email_content .= "<TEXT>" . $template->content . "</TEXT>";
+			$email_content = str_replace("\n", "<br/>", $email_content);
+			$email_content = str_replace("XXXXX", $sexe . ". " . $client_name, $email_content);
+			$email_content = str_replace("YYYYY", $patient_name, $email_content);
+			$email_content = str_replace("DDDDD", $date, $email_content);			
+			$email_content .= "</html>";
 			
 			$this->sendEmail("sonhuytran@gmail", $client_email, "Thank you from Coastal Cat Clinic", $email_content);
 			
@@ -77,6 +78,7 @@ class SendEmailController extends Controller
 	
 		$this->render('index', array(
 			"email_sent" => $email_sent,
+			"email_content" => $email_content,
 		));
 	}
 }	
