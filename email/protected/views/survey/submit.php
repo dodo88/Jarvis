@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 	'Submit',
 );
 ?>
-<h1>Your answers has been saved.<?php //echo $this->id . '/' . $this->action->id; ?></h1>
+<h1>Thank you very much. Your answers has been saved.<?php //echo $this->id . '/' . $this->action->id; ?></h1>
 
 <p>
 	<?php // echo __FILE__; ?>
@@ -17,6 +17,6 @@ $this->breadcrumbs=array(
 		
 		<textarea name="content" width="500" height="100" readonly="readonly"><?php	echo $answer_content; ?></textarea><br/><br/>
 		
-		<input type="submit" value="OK"/>
+		<!--<input type="submit" value="OK"/>-->
 	</form>
 </p>

@@ -47,7 +47,7 @@ class Email extends CActiveRecord
 		return array(
 			array('add_from, subject, website, facebook, survey', 'length', 'max'=>128),
 			array('contact_info', 'length', 'max'=>255),
-			array('logo, background, header, footer', 'safe'),
+			array('logo, background, header, footer', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, add_from, subject, content, website, facebook, survey, contact_info, logo, background, header, footer', 'safe', 'on'=>'search'),

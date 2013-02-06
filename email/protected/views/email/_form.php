@@ -1,6 +1,7 @@
 <?php
 /* @var $this ProjectController */
 /* @var $data Project */
+
 ?>
 <div class="form_template">
 <div class="template1">

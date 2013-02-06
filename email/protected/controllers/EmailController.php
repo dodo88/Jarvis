@@ -65,30 +65,33 @@ class EmailController extends Controller
                         
 			}
 		}
-                
+         
 		if(!$acceptable_ext){
 			$validated = 0;
 		}   
-		}else{
+		} else{
 			$validated = 0;
 		}
+		
 		if($validated){
 			$fileName = $_FILES['logo_template']['name'];
 			$tmpName  = $_FILES['logo_template']['tmp_name'];
 			$fileSize = $_FILES['logo_template']['size'];
 			$fileType = $_FILES['logo_template']['type'];
-			$fp = fopen($tmpName, 'r');
-			$content = fread($fp, filesize($tmpName));
-			$content = addslashes($content);
-			fclose($fp);
-			if(!get_magic_quotes_gpc()){
-				$fileName = addslashes($fileName);
-			}
-			$file_info = pathinfo($_FILES['logo_template']['name']);
-			$model->setAttribute('logo_type',$file_info['extension']);
-			$model->setAttribute('logo',$content);
+			// $fp = fopen($tmpName, 'r');
+			// $content = fread($fp, filesize($tmpName));
+			// $content = addslashes($content);
+			// fclose($fp);
+			// if(!get_magic_quotes_gpc()){
+				// $fileName = addslashes($fileName);
+			// }
+			// $file_info = pathinfo($_FILES['logo_template']['name']);
+			// $model->setAttribute('logo_type',$file_info['extension']);
+			move_uploaded_file($tmpName, Yii::app()->basePath . "/../css/images/users/" . $fileName);
+			$model->setAttribute('logo', Yii::app()->baseUrl . "/css/images/users/" . $fileName);
 		}
 		
+		$validated = 1;
 		if($_FILES && $_FILES['background_template']['name']){
             
 		//make sure the file has a valid file extension
@@ -109,29 +112,36 @@ class EmailController extends Controller
 		}else{
 			$validated = 0;
 		}
+		
 		if($validated){
 			$fileName = $_FILES['background_template']['name'];
 			$tmpName  = $_FILES['background_template']['tmp_name'];
 			$fileSize = $_FILES['background_template']['size'];
 			$fileType = $_FILES['background_template']['type'];
-			$fp = fopen($tmpName, 'r');
-			$content = fread($fp, filesize($tmpName));
-			$content = addslashes($content);
-			fclose($fp);
-			if(!get_magic_quotes_gpc()){
-				$fileName = addslashes($fileName);
-			}
-			$file_info = pathinfo($_FILES['background_template']['name']);
-			$model->setAttribute('background_type',$file_info['extension']);
-			$model->setAttribute('background',$content);
+			// $fp = fopen($tmpName, 'r');
+			// $content = fread($fp, filesize($tmpName));
+			// $content = addslashes($content);
+			// fclose($fp);
+			// if(!get_magic_quotes_gpc()){
+				// $fileName = addslashes($fileName);
+			// }
+			// $file_info = pathinfo($_FILES['background_template']['name']);
+			// $model->setAttribute('background_type',$file_info['extension']);
+			
+			move_uploaded_file($tmpName, Yii::app()->basePath . "/../css/images/users/" . $fileName);
+			$model->setAttribute('background', Yii::app()->baseUrl . "/css/images/users/" . $fileName);
 		}
 		
+		$validated = 1;
 		if($_FILES && $_FILES['header_template']['name']){
             
 		//make sure the file has a valid file extension
     
 		$file_info = pathinfo($_FILES['header_template']['name']);
 		$acceptable_ext = 0;
+		
+		
+		
 		for($x = 0; $x < count($acceptable_extensions); $x++){
                     
 			if($file_info['extension'] == $acceptable_extensions[$x]){
@@ -143,25 +153,31 @@ class EmailController extends Controller
 		if(!$acceptable_ext){
 			$validated = 0;
 		}   
-		}else{
+		} else{
 			$validated = 0;
 		}
+		
 		if($validated){
+		
 			$fileName = $_FILES['header_template']['name'];
 			$tmpName  = $_FILES['header_template']['tmp_name'];
 			$fileSize = $_FILES['header_template']['size'];
 			$fileType = $_FILES['header_template']['type'];
-			$fp = fopen($tmpName, 'r');
-			$content = fread($fp, filesize($tmpName));
-			$content = addslashes($content);
-			fclose($fp);
-			if(!get_magic_quotes_gpc()){
-				$fileName = addslashes($fileName);
-			}
-			$file_info = pathinfo($_FILES['header_template']['name']);
-			$model->setAttribute('header_type',$file_info['extension']);
-			$model->setAttribute('header',$content);
+			// $fp = fopen($tmpName, 'r');
+			// $content = fread($fp, filesize($tmpName));
+			// $content = addslashes($content);
+			// fclose($fp);
+			// if(!get_magic_quotes_gpc()){
+				// $fileName = addslashes($fileName);
+			// }
+			
+			// $file_info = pathinfo($_FILES['header_template']['name']);
+			// $model->setAttribute('header_type',$file_info['extension']);
+			move_uploaded_file($tmpName, Yii::app()->basePath . "/../css/images/users/" . $fileName);
+			$model->setAttribute('header', Yii::app()->baseUrl . "/css/images/users/" . $fileName);
 		}
+		
+		$validated = 1;
 		if($_FILES && $_FILES['footer_template']['name']){
             
 		//make sure the file has a valid file extension
@@ -187,19 +203,22 @@ class EmailController extends Controller
 			$tmpName  = $_FILES['footer_template']['tmp_name'];
 			$fileSize = $_FILES['footer_template']['size'];
 			$fileType = $_FILES['footer_template']['type'];
-			$fp = fopen($tmpName, 'r');
-			$content = fread($fp, filesize($tmpName));
-			$content = addslashes($content);
-			fclose($fp);
-			if(!get_magic_quotes_gpc()){
-				$fileName = addslashes($fileName);
-			}
-			$file_info = pathinfo($_FILES['footer_template']['name']);
-			$model->setAttribute('footer_type',$file_info['extension']);
-			$model->setAttribute('footer',$content);
+			// $fp = fopen($tmpName, 'r');
+			// $content = fread($fp, filesize($tmpName));
+			// $content = addslashes($content);
+			// fclose($fp);
+			
+			// if(!get_magic_quotes_gpc()){
+				// $fileName = addslashes($fileName);
+			// }
+			
+			// $file_info = pathinfo($_FILES['footer_template']['name']);
+			// $model->setAttribute('footer_type',$file_info['extension']);
+			move_uploaded_file($tmpName, Yii::app()->basePath . "/../css/images/users/" . $fileName);
+			$model->setAttribute('footer', Yii::app()->baseUrl . "/css/images/users/" . $fileName);
 		}
 		$model->save();
-		$this->render('index',array('data' => $model,false));
+		$this->render('index',array('data' => $model,false));		
 	}
 	// Uncomment the following methods and override them if needed
 	/*

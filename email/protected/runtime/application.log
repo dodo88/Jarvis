@@ -2223,3 +2223,65 @@ REQUEST_URI=/email/index.php?r=answer
 in C:\wamp\www\email\protected\views\answer\index.php (3)
 in C:\wamp\www\email\protected\views\answer\index.php (3)
 in C:\wamp\www\email\protected\controllers\AnswerController.php (7)
+2013/02/04 10:04:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/gii/GiiModule.php:168
+Stack trace:
+#0 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/email/index.php?r=gii
+---
+2013/02/04 10:05:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/gii/GiiModule.php:168
+Stack trace:
+#0 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/email/index.php?r=gii
+---
+2013/02/04 12:01:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/gii/GiiModule.php:168
+Stack trace:
+#0 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/email/index.php?r=gii
+---
+2013/02/04 17:16:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "survey".' in /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('survey')
+#1 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/email/index.php?r=survey
+---
+2013/02/06 09:18:23 [error] [php] Object of class CInlineAction could not be converted to string (/hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/views/layouts/main.php:66)
+Stack trace:
+#0 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/widgets/CContentDecorator.php(76): SurveyController->renderFile()
+#1 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#2 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#4 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CBaseController.php(300): SurveyController->endWidget()
+#5 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/views/layouts/column1.php(6): SurveyController->endContent()
+#6 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CBaseController.php(126): require()
+#7 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CBaseController.php(95): SurveyController->renderInternal()
+#8 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(784): SurveyController->renderFile()
+#9 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/controllers/SurveyController.php(15): SurveyController->render()
+#10 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/actions/CInlineAction.php(49): SurveyController->actionIndex()
+#11 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(286): SurveyController->runAction()
+#13 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CController.php(265): SurveyController->runActionWithFilters()
+#14 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(282): SurveyController->run()
+#15 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /hermes/waloraweb018/b1265/moo.sonhuytrancom/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#17 /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/index.php(13): CWebApplication->run()
+REQUEST_URI=/email/index.php?r=survey/index
+in /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/views/layouts/main.php (66)
+in /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/views/layouts/column1.php (6)
+in /hermes/waloraweb018/b1265/moo.sonhuytrancom/email/protected/controllers/SurveyController.php (15)

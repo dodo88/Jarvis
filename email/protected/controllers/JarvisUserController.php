@@ -28,7 +28,7 @@ class JarvisUserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('create'),
+				'actions'=>array(),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -40,6 +40,7 @@ class JarvisUserController extends Controller
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
+				'actions'=>array('create'),
 				'users'=>array('*'),
 			),
 		);

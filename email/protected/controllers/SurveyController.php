@@ -10,7 +10,7 @@ class SurveyController extends Controller
 		if(isset($_GET['Question']))
 			$model->attributes=$_GET['Question'];
 		$this->render('index',array(
-			'model'=>$model,
+			'model'=> $model,
 		));
 	}
 

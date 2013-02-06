@@ -26,43 +26,50 @@
 <body>
 
 <div class="container" id="page">
-
-	<div id="header">
-		<!-- <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div> -->
-		<div id="logo">
-			<div class="middle">
-				<a class="return" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php">
-					<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/images/CCC_Logo.jpg" alt="">
-				</a>
-				<div id="login" style="float:right;">
-					<?php if (Yii::app()->user->isGuest) { ?>
-						<a href="#"><?php //if (isset($useremail)) echo $useremail; ?></a>
-						<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=jarvisUser/create">Sign up</a>
-						<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/login">Log In</a>
-					<?php } else { ?>
-						<?php echo "Hi, " . Yii::app()->user->name . " !"; ?>
-						<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/logout">Log Out</a>
-						<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=jarvisUser/update&id=<?php echo Yii::app()->user->getJarvisUserId(); ?>">Edit Profile</a>
-					<?php }?>
+	<?php if ($this->action->controller->id != 'survey') { ?>
+		<div id="header">
+			<!-- <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div> -->
+			<div id="logo">
+				<div class="middle">
+					<a class="return" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/images/CCC_Logo.jpg" alt="">
+					</a>
+					<div id="login" style="float:right;">
+						<?php if (Yii::app()->user->isGuest) { ?>
+							<a href="#"><?php //if (isset($useremail)) echo $useremail; ?></a>
+							<!--<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=jarvisUser/create">Sign up</a>-->
+							<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/login">Log In</a>
+						<?php } else { ?>
+							<?php echo "Hi, " . Yii::app()->user->name . " !"; ?>
+							<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/logout">Log Out</a>
+							<a class="membership_head" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=jarvisUser/update&id=<?php echo Yii::app()->user->getJarvisUserId(); ?>">Edit Profile</a>
+						<?php }?>
+					</div>
+					<br/><br/>
 				</div>
-				<br/><br/>
 			</div>
-		</div>
-	</div><!-- header -->
+		</div><!-- header -->
+	<?php } ?>
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Do Survey', 'url'=>array('survey/index'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Send Email', 'url'=>array('sendEmail/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Email Template Management', 'url'=>array('email/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Question Survey Management', 'url'=>array('question/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Report Management', 'url'=>array('report/admin'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
+		<?php
+			if ($this->action->controller->id != 'survey')
+				$this->widget('zii.widgets.CMenu',array(
+				'items'=>array(
+					array('label'=>'Home', 'url'=>array('/site/index')),
+					// array('label'=>'Do Survey', 'url'=>array('survey/index'), 'visible'=>Yii::app()->user->isGuest),
+					array('label'=>'Send Email', 'url'=>array('sendEmail/index'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Email Template Management', 'url'=>array('email/index'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Question Survey Management', 'url'=>array('question/index'), 'visible'=>!Yii::app()->user->isGuest),
+					array('label'=>'Report Management', 'url'=>array('report/admin'), 'visible'=>!Yii::app()->user->isGuest)
+				),
+		));
+		
+		?>
 	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
+	<?php 
+		if ($this->action->controller->id != 'survey')
+			if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
@@ -71,17 +78,17 @@
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy;
-		<?php
-			date_default_timezone_set('UTC');
-			echo date('Y');
-		?> by Jarvis.<br/>
-		All Rights Reserved.<br/>
-		<?php // echo Yii::powered(); ?>
-	</div><!-- footer -->
-
+	<?php if ($this->action->controller->id != 'survey') { ?>
+		<div id="footer">
+			Copyright &copy;
+			<?php
+				date_default_timezone_set('UTC');
+				echo date('Y');
+			?> by Coastal Cat Clinic.<br/>
+			All Rights Reserved.<br/>
+			<?php // echo Yii::powered(); ?>
+		</div><!-- footer -->
+	<?php } ?>
 </div><!-- page -->
 
 </body>
